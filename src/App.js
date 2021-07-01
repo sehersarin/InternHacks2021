@@ -1,9 +1,15 @@
-
+import Header from './Components/Header'
+import Body from './Components/Body'
+import Footer from './Components/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div>
-     <h1> Hello World </h1>
+     <Header/>
+     <hr/>
+     <Body/>
+     <Footer/>
     </div>
   );
 }
