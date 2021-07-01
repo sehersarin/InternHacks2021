@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/InternHacks2021/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/InternHacks2021/static/js/main.67d0bedb.chunk.js",
+    "main.js.map": "/InternHacks2021/static/js/main.67d0bedb.chunk.js.map",
+    "runtime-main.js": "/InternHacks2021/static/js/runtime-main.a291cfe5.js",
+    "runtime-main.js.map": "/InternHacks2021/static/js/runtime-main.a291cfe5.js.map",
+    "static/js/2.966da077.chunk.js": "/InternHacks2021/static/js/2.966da077.chunk.js",
+    "static/js/2.966da077.chunk.js.map": "/InternHacks2021/static/js/2.966da077.chunk.js.map",
+    "index.html": "/InternHacks2021/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/InternHacks2021/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.966da077.chunk.js.LICENSE.txt": "/InternHacks2021/static/js/2.966da077.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a291cfe5.js",
+    "static/js/2.966da077.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.67d0bedb.chunk.js"
+  ]
+}

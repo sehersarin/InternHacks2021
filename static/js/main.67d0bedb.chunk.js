@@ -1,0 +1,2 @@
+(this.webpackJsonptechmentor=this.webpackJsonptechmentor||[]).push([[0],{10:function(e,t,n){"use strict";n.r(t);var c=n(1),r=n.n(c),o=n(3),i=n.n(o),s=(n(8),n(0));var d=function(){return Object(s.jsx)("div",{children:Object(s.jsx)("h1",{children:" Hello World "})})};i.a.render(Object(s.jsx)(r.a.StrictMode,{children:Object(s.jsx)(d,{})}),document.getElementById("root"))},8:function(e,t,n){}},[[10,1,2]]]);
+//# sourceMappingURL=main.67d0bedb.chunk.js.map
