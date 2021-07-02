@@ -4,8 +4,8 @@ const Body = () => {
     <div>
       <div className="container">
         <div className="row">
-          <div className="col">
-            <div className="card w-18rem h-75 shadow rounded">
+          <div className="col-6">
+            <div className="card w-18rem h-auto shadow rounded mt-3">
               <div className="card-body">
                 <h4 className="card-title text-center p-4 m-3">
                   Mentorship with a Purpose
@@ -16,15 +16,15 @@ const Body = () => {
                   roles and companies you are interested in, and join our global
                   community.
                 </p>
-                <div className="text-center p-3">
-                  <button className="btn btn-dark text-warning rounded p-4 mt-2 w-75">
-                    <div className="h3">Join our Program</div>
+                <div className="d-flex justify-content-center p-3 ">
+                  <button className="btn btn-dark text-warning rounded p-4 mt-2 w-75 fs-2">
+                    Join our Program
                   </button>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col-6">
             <img className="w-100" src={team} alt="team" />
           </div>
         </div>
