@@ -1,4 +1,6 @@
 import team from "../Images/team.png";
+import Apply from './Apply';
+
 const Body = () => {
   return (
     <div>
@@ -17,9 +19,12 @@ const Body = () => {
                   community.
                 </p>
                 <div className="d-flex justify-content-center p-3 ">
-                  <button className="btn btn-dark text-warning rounded p-4 mt-2 w-75 fs-2">
-                    Join our Program
-                  </button>
+                  <a className="navbar-brand navb h1" href="/apply">
+                    {" "}
+                    <button className="btn btn-dark text-warning rounded p-4 mt-2 w-95 fs-2">
+                      Join our Program
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
