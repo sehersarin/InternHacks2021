@@ -14,24 +14,19 @@ const Header = () => {
           </div>
           <ul className="nav">
             <li className="nav-item">
-              <a className="nav-link navb" aria-current="page" href="/find-mentor">
+              <a className="nav-link navb" aria-current="page" href="/become-mentor">
+                Become a Mentor
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link navb" href="/find-mentor">
                 Find a Mentor
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link navb" href="/study">
-                Study
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link navb" href="/community">
-                Community
               </a>
             </li>
             <li className="nav-item">
               <a
                 className="nav-link navb btn btn-dark text-warning rounded"
-                href="#"
+                href="/sign-in"
               >
                 Sign in
               </a>

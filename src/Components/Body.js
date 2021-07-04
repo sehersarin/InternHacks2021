@@ -1,5 +1,4 @@
 import team from "../Images/team.png";
-import Apply from './Apply';
 
 const Body = () => {
   return (

@@ -8,6 +8,8 @@ import Community from './Components/Community';
 import Apply from './Components/Apply';
 import ApplyMentee from './Components/ApplyMentee';
 import ApplyMentor from './Components/ApplyMentor';
+import BecomeMentor from './Components/BecomeMentor';
+import SignIn from './Components/SignIn';
 import Route from './Components/Route';
 
 function App() {
@@ -27,8 +29,14 @@ function App() {
      <Route path='/apply-mentee'>
        <ApplyMentee />
      </Route>
+     <Route path='/become-mentor'>
+       <BecomeMentor />
+     </Route>
      <Route path='/find-mentor'>
        <FindMentor />
+     </Route>
+     <Route path='/sign-in'>
+       <SignIn />
      </Route>
      <Route path='/study'>
        <Study />
