@@ -1,7 +1,7 @@
 function Apply() {
     return(
         <div>
-            <h4 className="text-center"><b>Apply Today</b></h4>
+            <h3 className="text-center mt-4 mb-4"><b>Apply Today</b></h3>
             <div className="container">
                 <div className="row">
                     <div className="col-6">
@@ -18,7 +18,7 @@ function Apply() {
                                     <a className="navbar-brand navb h1" href="/apply-mentor">
                                         {" "}
                                         <button className="btn btn-dark text-warning rounded p-4 mt-2 w-95 fs-2">
-                                            Apply to be a Mentor
+                                            <h4><b>Apply to become a Mentor</b></h4>
                                         </button>
                                     </a>
                                 </div>
@@ -39,7 +39,7 @@ function Apply() {
                                     <a className="navbar-brand navb h1" href="/apply-mentee">
                                         {" "}
                                         <button className="btn btn-dark text-warning rounded p-4 mt-2 w-95 fs-2">
-                                            Apply to be a Mentee
+                                            <h4><b>Apply to become a Mentee</b></h4>
                                         </button>
                                     </a>
                                 </div>

@@ -21,7 +21,7 @@ const Body = () => {
                   <a className="navbar-brand navb h1" href="/apply">
                     {" "}
                     <button className="btn btn-dark text-warning rounded p-4 mt-2 w-95 fs-2">
-                      Join our Program
+                      <h4><b>Join our Program</b></h4>
                     </button>
                   </a>
                 </div>

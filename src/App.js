@@ -2,14 +2,16 @@ import Header from './Components/Header'
 import Body from './Components/Body'
 import Footer from './Components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import FindMentor from './Components/FindMentor';
-import Study from './Components/Study';
-import Community from './Components/Community';
-import Apply from './Components/Apply';
-import ApplyMentee from './Components/ApplyMentee';
-import ApplyMentor from './Components/ApplyMentor';
-import BecomeMentor from './Components/BecomeMentor';
-import SignIn from './Components/SignIn';
+import FindMentor from './Components/Mentees/FindMentor';
+import Study from './Components/Mentees/Study';
+import Community from './Components/Mentees/Community';
+import Apply from './Components/Applications/Apply';
+import ApplyMentee from './Components/Applications/ApplyMentee';
+import ApplyMentor from './Components/Applications/ApplyMentor';
+import BecomeMentor from './Components/Applications/BecomeMentor';
+import SignIn from './Components/Log-in/SignIn';
+import SignUp from './Components/Log-in/SignUp';
+import ForgotPassword from './Components/Log-in/ForgotPassword';
 import Route from './Components/Route';
 
 function App() {
@@ -38,6 +40,12 @@ function App() {
      <Route path='/sign-in'>
        <SignIn />
      </Route>
+     <Route path='/sign-up'>
+       <SignUp />
+      </Route>
+      <Route path='/forgot-password'>
+       <ForgotPassword />
+      </Route>
      <Route path='/study'>
        <Study />
      </Route>
