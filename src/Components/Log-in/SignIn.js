@@ -44,11 +44,11 @@ function SignIn() {
                         value="remember_me"/>
                     <label className="ml-2"
                         for="remember_me">Remember Me</label>
-                    <div className="container"
-                        style={{width: "2px"}}>
+                    <div className="grid"
+                        style={{width: "130px"}}>
                     </div>
                     <a 
-                        className="navbar-brand navb" 
+                        className="navb" 
                         href="/forgot-password"
                         style={{textDecorationLine: 'underline'}}>{" "}
                         <p style={{fontSize: "16px"}}>Forgot Password</p>
@@ -63,7 +63,7 @@ function SignIn() {
                 <div className="row mt-3">
                     <p className="ml-3 mr-5" style={{fontSize: "14px"}}>New to Tech Mentor Match?</p>
                     <a 
-                        className="navbar-brand navb ml-5" 
+                        className="navb ml-5" 
                         href="/sign-up"
                         style={{textDecorationLine: 'underline'}}>{" "}
                         <p style={{fontSize: "14px"}}>Create an account</p>
