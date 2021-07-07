@@ -15,7 +15,8 @@ function Apply() {
                                     to get a foot in the door in tech!
                                 </p>
                                 <div className="d-flex justify-content-center p-3 ">
-                                    <a className="navbar-brand navb h1" href="/apply-mentor">
+                                    <a className="navbar-brand navb h1" 
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSeMVuZCK3jHdMzpr7--HgFBao2ZdyhD0hdP79eoE8mdmnLgVA/viewform?usp=sf_link">
                                         {" "}
                                         <button className="btn btn-dark text-warning rounded p-4 mt-2 w-95 fs-2">
                                             <h4><b>Apply to become a Mentor</b></h4>
@@ -32,11 +33,12 @@ function Apply() {
                                     For Mentees
                                 </h4>
                                 <p className="card-text text-center p-3 m-2">
-                                    Want to get guidance from peer mentors who have worked in the tech roles you're interested in
-                                    or study for technical interviews with? Sign up today!
+                                    Want to get guidance from peer mentors who've worked in the tech roles you're interested in? 
+                                    Sign up today!
                                 </p>
                                 <div className="d-flex justify-content-center p-3 ">
-                                    <a className="navbar-brand navb h1" href="/apply-mentee">
+                                    <a className="navbar-brand navb h1" 
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSehkXYwEJeSQwMXC7U_ezLxKfo2822XxTBIjdcrkTnOn1eoGQ/viewform?usp=sf_link">
                                         {" "}
                                         <button className="btn btn-dark text-warning rounded p-4 mt-2 w-95 fs-2">
                                             <h4><b>Apply to become a Mentee</b></h4>

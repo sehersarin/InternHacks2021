@@ -15,12 +15,12 @@ const Header = () => {
           <ul className="nav">
             <li className="nav-item">
               <a className="nav-link navb" aria-current="page" href="/become-mentor">
-                Become a Mentor
+                <b>Become a Mentor</b>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link navb" href="/find-mentor">
-                Find a Mentor
+                <b>Find a Mentor</b>
               </a>
             </li>
             <li className="nav-item">
@@ -28,7 +28,7 @@ const Header = () => {
                 className="nav-link navb btn btn-dark text-warning rounded"
                 href="/sign-in"
               >
-                Sign in
+                <b>Sign in</b>
               </a>
             </li>
           </ul>

@@ -18,7 +18,7 @@ const Body = () => {
                   community.
                 </p>
                 <div className="d-flex justify-content-center p-3 ">
-                  <a className="navbar-brand navb h1" href="/apply">
+                  <a className="navbar-brand navb h1" href="/sign-up">
                     {" "}
                     <button className="btn btn-dark text-warning rounded p-4 mt-2 w-95 fs-2">
                       <h4><b>Join our Program</b></h4>
