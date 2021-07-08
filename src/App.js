@@ -1,6 +1,5 @@
 import Header from "./Components/Header";
 import Body from "./Components/Body";
-import Footer from "./Components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FindMentor from "./Components/Mentees/FindMentor";
 import Study from "./Components/Mentees/Study";
