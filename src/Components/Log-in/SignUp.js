@@ -1,61 +1,115 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { useAuth } from '../../context/AuthContext';
+import { useHistory } from 'react-router-dom';
+import { Alert } from '@material-ui/lab';
+import Header from "../../Components/Header";
 
 function SignUp() {
-    const[values, setValues] = React.useState({
-        password: "",
-        showPassword: false,
-    });
+    const emailRef = useRef()
+    const passwordRef = useRef()
+    const passwordConfirmRef = useRef()
+    const { signup } = useAuth()
+    const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
+    const history = useHistory()
 
-    const handlePasswordChange = (prop) => (event) => {
-        setValues({...values, [prop]: event.target.value});
+    async function handleSubmit(e) {
+        e.preventDefault()
+
+        if(emailRef.current.value.length==0) {
+            return setError('Email cannot be empty')
+        }
+
+        if(passwordRef.current.value.length==0 || 
+            passwordConfirmRef.current.value.length==0) {
+            return setError('Password cannot be empty')
+        }
+
+        if(passwordRef.current.value.length <= 6) {
+            return setError('Password needs to be at least 6 characters')
+        }
+
+        if(passwordRef.current.value !== passwordConfirmRef.current.value) {
+            return setError('Passwords do not match')
+        }
+
+        try {
+            setError('')
+            setLoading(true)
+            await signup(emailRef.current.value, passwordRef.current.value)
+            history.push("/apply")
+        } catch {
+            setError('Failed to create an account')
+        }
+        setLoading(false)
     }
 
     return(
+        <>
+        <Header />
+        <hr />
         <div className="container">
             <h2 className="text-center mt-5 mb-5"><b>Create An Account</b></h2>
-            {/* <p className="text-center mt-4 mb-5">A place to meet other students preparing for technical
-            interviews and to find mentorship</p> */}
-            <div className="container" 
-                style={{
-                    display: "grid", 
-                    justifyContent: "center",
-                }}>
-                <p><b>Email Address</b></p>
-                <div className="container"
-                    style={{width: "22px"}}
-                    backgroundColor="red">
-                </div>
-                <input 
-                    className="rounded-md w-auto border border-gray-400 p-3 mb-4"
-                    type="text" 
-                    placeholder="johndoe@gmail.com">
-                </input>
-                <p><b>Password</b></p>
-                <input 
-                    className="rounded-md w-auto border border-gray-400 p-3 mb-4"
-                    type="password" 
-                    placeholder="password"
-                    value={values.password}
-                    onChange={handlePasswordChange("password")}>
-                </input>
+            <div className="container">
+                <form onSubmit={handleSubmit} 
+                    style={{display: "grid", 
+                            justifyContent: "center"}}>
+                    <label><p className="mb-3"><b>Email Address</b></p>
+                        <input 
+                            className="rounded-md w-100 border border-gray-400 p-3 mb-4"
+                            type="email" 
+                            placeholder="johndoe@gmail.com"
+                            ref={emailRef} 
+                            required />
+                    </label>
+                    <label><p className="mb-3"><b>Password</b></p>
+                        <input 
+                            className="rounded-md w-100 border border-gray-400 p-3 mb-4"
+                            type="password" 
+                            placeholder="Password"
+                            ref={passwordRef}
+                            required />
+                    </label>
+                    
+                    <label><p className="mb-3"><b>Password Confirmation</b></p>
+                        <input 
+                            className="rounded-md w-100 border border-gray-400 p-3 mb-4"
+                            type="password" 
+                            placeholder="Password"
+                            ref={passwordConfirmRef}
+                            required />
+                    </label>
 
-                {/* <div className="d-flex justify-content-center" style={{backgroundColor: "red"}}> */}
-                    <a className="navb h1" href="/apply">{" "}
-                        <button className="btn btn-dark text-warning rounded p-3 mt-2"
-                            style={{width: "380px"}}>
-                            <h4><b>Sign up</b></h4>
-                        </button>
-                    </a>
-                {/* </div> */}
+                    {error && <Alert severity="error" className="mb-4">{error}</Alert>}
 
-                <div className="row mt-3">
-                    <p className="ml-3 mr-5" style={{fontSize: "14px", color: "white"}}>New to Tech Mentor Match?</p>
-                    <p className="ml-5">
-                        <p style={{fontSize: "14px", color: "white"}}>Create an account</p>
-                    </p>
+                    {/* <div className="d-flex justify-content-center" style={{backgroundColor: "red"}}> */}
+                        {/* <a className="navb h1" href="#">{" "} */}
+                            <button className="btn btn-dark text-warning rounded p-3"
+                                disabled={loading}
+                                type="submit"
+                                style={{ width: "380px" }}>
+                                <h4><b>Sign up</b></h4>
+                            </button>
+                        {/* </a> */}
+                    {/* </div> */}
+                </form>
+
+                <div className="row mt-3 ml-5">
+                    <p style={{fontSize: "14px"}}>Already have an account?</p>
+                    <div className="col mr-4">
+                        <div className="container" style={{textAlign: "right"}}>
+                            <a 
+                                className="navb" 
+                                href="/sign-in"
+                                style={{textDecorationLine: 'underline'}}>{" "}
+                                <p style={{fontSize: "14px"}}>Log in</p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

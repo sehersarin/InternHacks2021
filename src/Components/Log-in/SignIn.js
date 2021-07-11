@@ -1,67 +1,97 @@
-//import styles css
-import React from "react";
+import React, { useRef, useState } from "react";
+import { useAuth } from '../../context/AuthContext';
+import { useHistory } from "react-router-dom";
+import Header from "../../Components/Header";
+import { Alert } from '@material-ui/lab';
 
 function SignIn() {
-    const[values, setValues] = React.useState({
-        password: "",
-        showPassword: false,
-    });
+    const emailRef = useRef()
+    const passwordRef = useRef()
+    const { signin } = useAuth()
+    const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
+    const history = useHistory()
 
-    const handlePasswordChange = (prop) => (event) => {
-        setValues({...values, [prop]: event.target.value});
+    async function handleSubmit(e) {
+        e.preventDefault()
+
+        if(emailRef.current.value.length==0 || 
+            passwordRef.current.value.length==0) {
+            return setError('Email and/or password is empty')
+        }
+
+        try {
+            setError('')
+            setLoading(true)
+            await signin(emailRef.current.value, passwordRef.current.value)
+            history.push("/find-mentor")
+        } catch {
+            setError('Failed to sign in')
+        }
+        setLoading(false)
     }
 
     return(
+        <>
+        <Header />
+        <hr />
         <div className="container">
             <h2 className="text-center mt-5 mb-5"><b>Welcome Back!</b></h2>
             {/* <p className="text-center mt-4 mb-5">A place to meet other students preparing for technical
             interviews and to find mentorship</p> */}
-            <div className="container" 
-                style={{
-                    display: "grid", 
-                    justifyContent: "center",
-                }}>
-                <p><b>Email Address</b></p>
-                <input 
-                    className="rounded-md w-auto border border-gray-400 p-3 mb-4"
-                    type="text" 
-                    placeholder="johndoe@gmail.com">
-                </input>
-                <p><b>Password</b></p>
-                <input 
-                    className="rounded-md w-auto border border-gray-400 p-3 mb-4"
-                    type="password" 
-                    placeholder="password"
-                    value={values.password}
-                    onChange={handlePasswordChange("password")}>
-                </input>
+            <div className="container">
+                {error && <alert type="danger">{error}</alert>}
+                <form onSubmit={handleSubmit} 
+                    style={{display: "grid", 
+                            justifyContent: "center"}}>
+                    <label><p className="mb-3"><b>Email Address</b></p>
+                        <input 
+                            className="rounded-md w-100 border border-gray-400 p-3 mb-4"
+                            type="email" 
+                            placeholder="johndoe@gmail.com"
+                            ref={emailRef} 
+                            required />
+                    </label>
+                    <label><p className="mb-3"><b>Password</b></p>
+                        <input 
+                            className="rounded-md w-100 border border-gray-400 p-3 mb-4"
+                            type="password" 
+                            placeholder="Password"
+                            ref={passwordRef}
+                            required />
+                    </label>
 
-                <div className="row"
-                    style={{justifyContent: "center"}}>
-                    <input
-                        className="rounded-md w-auto border border-gray-400"
-                        type="checkbox"
-                        value="remember_me"/>
-                    <label className="ml-2"
-                        for="remember_me">Remember Me</label>
-                    <div className="grid"
-                        style={{width: "130px"}}>
+                    <div className="row"
+                        style={{justifyContent: "center"}}>
+                        <input
+                            className="rounded-md w-auto border border-gray-400"
+                            type="checkbox"
+                            value="remember_me"/>
+                        <label className="ml-2"
+                            for="remember_me">Remember Me</label>
+                        <div className="grid"
+                            style={{width: "130px"}}>
+                        </div>
+                        <a 
+                            className="navb" 
+                            href="/forgot-password"
+                            style={{textDecorationLine: 'underline'}}>{" "}
+                            <p style={{fontSize: "16px"}}>Forgot Password</p>
+                        </a>
                     </div>
-                    <a 
-                        className="navb" 
-                        href="/forgot-password"
-                        style={{textDecorationLine: 'underline'}}>{" "}
-                        <p style={{fontSize: "16px"}}>Forgot Password</p>
-                    </a>
-                </div>
-                {/* <a className="navbar-brand navb h1" href="/homepage">{" "} */}
-                    <button className="btn btn-dark text-warning rounded p-3 mt-2 w-95">
+
+                    {error && <Alert severity="error" className="mb-4">{error}</Alert>}
+
+                    <button className="btn btn-dark text-warning rounded p-3"
+                        disabled={loading}
+                        type="submit"
+                        style={{ width: "380px" }}>
                         <h4><b>Sign in</b></h4>
                     </button>
-                {/* </a> */}
+                </form>
                 
                 <div className="row mt-3">
-                    <p className="ml-3 mr-5" style={{fontSize: "14px"}}>New to Tech Mentor Match?</p>
+                    <p className="ml-5 mr-5" style={{fontSize: "14px"}}>New to Tech Mentor Match?</p>
                     <a 
                         className="navb ml-5" 
                         href="/sign-up"
@@ -71,6 +101,7 @@ function SignIn() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

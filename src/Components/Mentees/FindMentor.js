@@ -1,54 +1,93 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Card } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+   // Button,
+   Card
+} from 'react-bootstrap';
 import team from "../../Images/team.png";
+import MenteeLoginHeader from "../Mentees/MenteeLoginHeader";
 
 function FindMentor() {
-  return (
-    <div>
-      <div className="container">
-        <div className="col-12">
-          <div className="mt-4 mb-4 mr-2">
-            <Button variant="outline-dark">
-              <b>Availability</b>
-            </Button>{" "}
-            <Button variant="outline-dark">
-              <b>Industry</b>
-            </Button>{" "}
-            <Button variant="outline-dark">
-              <b>Interests</b>
-            </Button>{" "}
-            <Button variant="outline-dark">
-              <b>Expertise</b>
-            </Button>{" "}
-            <Button variant="outline-dark">
-              <b>More Filters</b>
-            </Button>{" "}
-          </div>
-        </div>
-      </div>
+   return(
+     <>
+      <MenteeLoginHeader />
       <hr />
-      <div className="col-12">
-        <div className="row">
-          <div className="mt-3 ml-1 mr-1">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={team} />
-              <Card.Body>
-                <Card.Title>John Doe</Card.Title>
-                <Card.Text>Biography</Card.Text>
-              </Card.Body>
-            </Card>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={team} />
-              <Card.Body>
-                <Card.Title>Jane Doe</Card.Title>
-                <Card.Text>Biography</Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+       <div>
+           <div className="container">
+               <div className="row">
+                   {/* <div className="mt-4 mb-4 mr-2"> */}
+                       <button className="mr-2" style={{
+                           backgroundColor: "transparent",
+                           borderWidth: "1px",
+                           borderRadius: "30px",
+                           borderStyle: "solid",
+                           borderColor: "#14213D",
+                           padding: "13px"}}>
+                           <b style={{fontColor: "#14213D"}}>Availability</b>
+                       </button>
+                       <button className="mr-2" style={{
+                           backgroundColor: "transparent",
+                           borderWidth: "1px",
+                           borderRadius: "30px",
+                           borderStyle: "solid",
+                           borderColor: "#14213D",
+                           padding: "13px"}}>
+                           <b style={{fontColor: "#14213D"}}>Industry</b>
+                       </button>
+                       <button className="mr-2" style={{
+                           backgroundColor: "transparent",
+                           borderWidth: "1px",
+                           borderRadius: "30px",
+                           borderStyle: "solid",
+                           borderColor: "#14213D",
+                           padding: "13px"}}>
+                           <b style={{fontColor: "#14213D"}}>Interests</b>
+                       </button>
+                       <button style={{
+                           backgroundColor: "transparent",
+                           borderWidth: "1px",
+                           borderRadius: "30px",
+                           borderStyle: "solid",
+                           borderColor: "#14213D",
+                           padding: "13px"}}>
+                           <b style={{fontColor: "#14213D"}}>Expertise</b>
+                       </button>
+                       <button style={{
+                           backgroundColor: "transparent",
+                           borderWidth: "1px",
+                           borderRadius: "30px",
+                           borderStyle: "solid",
+                           borderColor: "#14213D",
+                           padding: "13px",
+                           alignItems: "right"}}>
+                           <b style={{fontColor: "#14213D"}}>Sort Mentors By</b>
+                       </button>
+                   {/* </div> */}
+               </div>
+           </div>
+           <hr/>
+           <div className="container m-5" style={{backgroundColor: "red"}}>
+               <div className="row">
+                   {/* <div className="m-5"> */}
+                       <Card style={{ width : '16rem', marginRight: '20px'}}>
+                           <Card.Img variant="top" src={team}/>
+                           <Card.Body>
+                               <Card.Title>John Doe</Card.Title>
+                               <Card.Text>Biography</Card.Text>
+                           </Card.Body>
+                       </Card>
+                       <Card style={{ width : '16rem'}}>
+                           <Card.Img variant="top" src={team}/>
+                           <Card.Body>
+                               <Card.Title>Jane Doe</Card.Title>
+                               <Card.Text>Biography</Card.Text>
+                           </Card.Body>
+                       </Card>
+                   {/* </div> */}
+               </div>
+           </div>
+       </div>
+       </>
+   )
 }
-
+ 
 export default FindMentor;

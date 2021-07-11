@@ -1,9 +1,13 @@
 import businessplan from "../../Images/businessplan.png";
 import friends from "../../Images/friends.png";
 import nomsg from "../../Images/nomsg.png";
+import Header from "../../Components/Header";
  
 function BecomeMentor() {
     return(
+        <>
+        <Header />
+        <hr />
         <div className="container">
             <h2 className="mt-5"><b>Simple ways to get started</b></h2>
             <div className="row" style={{justifyContent: "center"}}>
@@ -44,6 +48,7 @@ function BecomeMentor() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
  

@@ -1,5 +1,10 @@
+import MenteeLoginHeader from "./MenteeLoginHeader"
+
 function Study() {
   return (
+    <>
+    <MenteeLoginHeader />
+    <hr />
     <div>
       <div className="d-flex ml-4 mt-4">
         <h2><b>Dashboard</b></h2>
@@ -67,6 +72,7 @@ function Study() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
