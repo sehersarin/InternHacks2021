@@ -33,6 +33,8 @@ function SignUp() {
             return setError('Password needs to be at least 6 characters')
         }
 
+        //check if account is already created or not
+
         try {
             setError('')
             setLoading(true)
@@ -94,9 +96,20 @@ function SignUp() {
                     {/* </div> */}
                 </form>
 
-                <div className="row mt-3 ml-5">
+                <div className="row mt-3" style={{justifyContent: 'center'}}>
                     <p style={{fontSize: "14px"}}>Already have an account?</p>
-                    <div className="col mr-4">
+                    <div className='grid' style={{width: '180px'}}/>
+                    <a 
+                        className="navb" 
+                        href="/sign-in"
+                        style={{textDecorationLine: 'underline'}}>{" "}
+                        <p style={{fontSize: "14px"}}>Log in</p>
+                    </a>
+                </div>
+
+                {/* <div className="row mt-3" style={{justifyContent: 'center'}}>
+                    <p style={{fontSize: "14px"}}>Already have an account?</p>
+                    <div className="col">
                         <div className="container" style={{textAlign: "right"}}>
                             <a 
                                 className="navb" 
@@ -106,7 +119,7 @@ function SignUp() {
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
         </>

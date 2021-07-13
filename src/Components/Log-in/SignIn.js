@@ -40,7 +40,6 @@ function SignIn() {
             {/* <p className="text-center mt-4 mb-5">A place to meet other students preparing for technical
             interviews and to find mentorship</p> */}
             <div className="container">
-                {error && <alert type="danger">{error}</alert>}
                 <form onSubmit={handleSubmit} 
                     style={{display: "grid", 
                             justifyContent: "center"}}>
@@ -90,8 +89,8 @@ function SignIn() {
                     </button>
                 </form>
                 
-                <div className="row mt-3">
-                    <p className="ml-5 mr-5" style={{fontSize: "14px"}}>New to Tech Mentor Match?</p>
+                <div className="row mt-3" style={{justifyContent: 'center'}}>
+                    <p className="mr-5" style={{fontSize: "14px"}}>New to Tech Mentor Match?</p>
                     <a 
                         className="navb ml-5" 
                         href="/sign-up"
