@@ -1,6 +1,5 @@
 import Header from "./Components/Header";
 import Body from "./Components/Body";
-import "bootstrap/dist/css/bootstrap.min.css";
 import FindMentor from "./Components/Mentees/FindMentor";
 import Study from "./Components/Mentees/Study";
 import Community from "./Components/Mentees/Community";
@@ -10,10 +9,13 @@ import SignIn from "./Components/Log-in/SignIn";
 import SignUp from "./Components/Log-in/SignUp";
 import ForgotPassword from "./Components/Log-in/ForgotPassword";
 import MenteeProfile from "./Components/Mentees/MenteeProfile";
+import MenteeEditProfile from "./Components/Mentees/MenteeEditProfile";
 // import Route from "./Components/Route";
 import { AuthProvider } from "./context/AuthContext";
 import { BrowserRouter as Router, Route, Switch, withRouter } from "react-router-dom"
 import PrivateRoute from './Components/Log-in/PrivateRoute';
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
           <PrivateRoute exact path='/study' component={withRouter(Study)} />
           <PrivateRoute exact path='/community' component={withRouter(Community)} />
           <PrivateRoute exact path='/mentee-profile' component={withRouter(MenteeProfile)} />
+          <PrivateRoute exact path='/mentee-edit-profile' component={withRouter(MenteeEditProfile)} />
         </Switch>
       </div>
     </AuthProvider>
