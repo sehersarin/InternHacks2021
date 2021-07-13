@@ -19,8 +19,10 @@ function Study() {
           <div className="card-body border border-gray shadow rounded m-4">
             <p>Interview Preparation</p>
             <h2>Interview Preparation Kit</h2>
-            <a href="#" className="btn btn-dark text-warning rounded mt-3">
-              <button className="btn btn-dark text-warning rounded pl-4 pr-4 w-95">
+            <a href="#" className="btn text-warning rounded mt-3"
+              style={{backgroundColor: "#14213D"}}>
+              <button className="btn text-warning rounded pl-4 pr-4 w-95"
+                  style={{backgroundColor: "#14213D"}}>
                   <h4><b>View</b></h4>
               </button>
             </a>
@@ -30,8 +32,10 @@ function Study() {
           <div className="card-body border border-gray shadow m-4">
             <p>New Skill</p>
             <h2>Add your first skill</h2>
-            <a href="#" className="btn btn-dark text-warning rounded mt-3">
-              <button className="btn btn-dark text-warning rounded pl-4 pr-4 w-95">
+            <a href="#" className="btn text-warning rounded mt-3"
+              style={{backgroundColor: "#14213D"}}>
+              <button className="btn text-warning rounded pl-4 pr-4 w-95"
+                  style={{backgroundColor: "#14213D"}}>
                   <h4><b>Explore Skills</b></h4>
               </button>
             </a>

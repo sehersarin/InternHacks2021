@@ -25,7 +25,8 @@ const MainHeader = () => {
             </li>
             <li className="nav-item">
               <a
-                className="nav-link navb btn btn-dark text-warning rounded"
+                className="nav-link navb btn text-warning rounded"
+                style={{backgroundColor: "#14213D"}}
                 href="/sign-in"
               >
                 <b>Sign in</b>

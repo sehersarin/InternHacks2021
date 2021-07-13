@@ -32,8 +32,6 @@ function SignUp() {
             return setError('Password needs to be at least 6 characters')
         }
 
-        //check if account is already created or not
-
         try {
             setError('')
             setLoading(true)
@@ -80,10 +78,10 @@ function SignUp() {
 
                     {error && <Alert severity="error" className="mb-4">{error}</Alert>}
 
-                    <button className="btn btn-dark text-warning rounded p-3"
+                    <button className="btn text-warning rounded p-3"
                         disabled={loading}
                         type="submit"
-                        style={{ width: "380px" }}>
+                        style={{ width: "380px", backgroundColor: "#14213D" }}>
                         <h4><b>Sign up</b></h4>
                     </button>
                 </form>

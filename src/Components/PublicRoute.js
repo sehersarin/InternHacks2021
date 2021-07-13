@@ -9,6 +9,8 @@ export default function PublicRoute({ component: Component, ...rest }) {
         <Route
             {...rest}
             render={props => (
+                //if recently signed up, then redirect to /apply
+                //else, redirect to /
                 !currentUser ? <Component {...props}/> : <Redirect to="/"/>
             )}
         />

@@ -42,7 +42,8 @@ const MenteeLoginHeader = () => {
             </li>
             <li className="nav-item">
               <a
-                className="nav-link navb btn btn-dark text-warning rounded"
+                className="nav-link navb btn text-warning rounded"
+                style={{backgroundColor: "#14213D"}}
                 href="/mentee-profile"
               >
                 <Avatar className={classes.purple}>A</Avatar>

@@ -21,16 +21,17 @@ function MenteeProfile() {
 
     return(
         <div>
-            <Link to="/mentee-edit-profile" className="btn btn-dark text-warning rounded p-3">
+            <Link to="/mentee-edit-profile" className="btn text-warning rounded p-3"
+                style={{backgroundColor: "#14213D"}}>
                 <h4><b>Edit Profile</b></h4>
             </Link>
 
             {error && <Alert severity="error" className="mb-4">{error}</Alert>}
                     
-            <button className="btn btn-dark text-warning rounded p-3"
+            <button className="btn text-warning rounded p-3"
                 type="submit"
                 onClick={handleSignOut}
-                style={{ width: "380px" }}>
+                style={{ width: "380px", backgroundColor: "#14213D" }}>
                 <h4><b>Log out</b></h4>
             </button>
         </div>

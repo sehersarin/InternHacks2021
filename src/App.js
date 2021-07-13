@@ -27,11 +27,11 @@ function App() {
         <hr />
         <Switch>
           <Route exact path='/' component={withRouter(Body)}/>
-          <PublicRoute exact path='/apply' component={withRouter(Apply)} />
           <PublicRoute exact path='/become-mentor' component={withRouter(BecomeMentor)}/>
           <PublicRoute exact path='/sign-in' component={withRouter(SignIn)} />
           <PublicRoute exact path='/sign-up' component={withRouter(SignUp)}/>
           <PublicRoute exact path='/forgot-password' component={withRouter(ForgotPassword)} />
+          <PrivateRoute exact path='/apply' component={withRouter(Apply)} />
           <PrivateRoute exact path='/find-mentor' component={withRouter(FindMentor)}/>
           <PrivateRoute exact path='/study' component={withRouter(Study)} />
           <PrivateRoute exact path='/community' component={withRouter(Community)} />
