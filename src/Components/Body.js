@@ -1,10 +1,7 @@
 import team from "../Images/team.png";
-import MainHeader from './Header';
 
 const Body = () => {
   return (
-    <>
-    <MainHeader />
     <div>
       <div className="container">
         <div className="row">
@@ -37,7 +34,6 @@ const Body = () => {
         </div>
       </div>
     </div>
-    </>
   );
 };
 

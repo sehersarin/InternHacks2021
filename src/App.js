@@ -13,16 +13,15 @@ import MenteeProfile from "./Components/Mentees/MenteeProfile";
 // import Route from "./Components/Route";
 import { AuthProvider } from "./context/AuthContext";
 import { BrowserRouter as Router, Route, Switch, withRouter } from "react-router-dom"
+import PrivateRoute from './Components/Log-in/PrivateRoute';
 
 function App() {
   return (
     <Router>
     <AuthProvider>
-      {/* <Router> */}
-      {/* <Switch> */}
       <div>
-        {/* <Header />
-        <hr /> */}
+        <Header />
+        <hr />
         <Switch>
           <Route exact path='/' component={withRouter(Body)}/>
           <Route exact path='/apply' component={withRouter(Apply)} />
@@ -30,42 +29,12 @@ function App() {
           <Route exact path='/sign-in' component={withRouter(SignIn)} />
           <Route exact path='/sign-up' component={withRouter(SignUp)}/>
           <Route exact path='/forgot-password' component={withRouter(ForgotPassword)} />
-          <Route exact path='/find-mentor' component={withRouter(FindMentor)}/>
-          <Route path='/study' component={withRouter(Study)} />
-          <Route path='/community' component={withRouter(Community)} />
-          <Route path='/mentee-profile' component={withRouter(MenteeProfile)} />
-
-        {/* <Route path="/">
-          <Body />
-        </Route>
-        <Route path="/apply">
-          <Apply />
-        </Route>
-        <Route path="/become-mentor">
-          <BecomeMentor />
-        </Route>
-        <Route path="/sign-in">
-          <SignIn />
-        </Route>
-        <Route path="/sign-up">
-          <SignUp />
-        </Route>
-        <Route path="/forgot-password">
-          <ForgotPassword />
-        </Route>
-        <Route path="/find-mentor">
-          <FindMentor />
-        </Route>
-        <Route path="/study">
-          <Study />
-        </Route>
-        <Route path="/community">
-          <Community />
-        </Route> */}
+          <PrivateRoute exact path='/find-mentor' component={withRouter(FindMentor)}/>
+          <PrivateRoute exact path='/study' component={withRouter(Study)} />
+          <PrivateRoute exact path='/community' component={withRouter(Community)} />
+          <PrivateRoute exact path='/mentee-profile' component={withRouter(MenteeProfile)} />
         </Switch>
       </div>
-      {/* </Router> */}
-      {/* </Switch> */}
     </AuthProvider>
     </Router>
   );

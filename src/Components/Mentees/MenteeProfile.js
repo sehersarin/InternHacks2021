@@ -1,7 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { Alert } from '@material-ui/lab';
 import { useAuth } from '../../context/AuthContext'; 
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 function MenteeProfile() {
     const [error, setError] = useState('')

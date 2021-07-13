@@ -1,10 +1,5 @@
-import MenteeLoginHeader from "../Mentees/MenteeLoginHeader";
-
 function Apply() {
     return(
-        <>
-        <MenteeLoginHeader />
-        <hr />
         <div>
             <h3 className="text-center mt-4 mb-4"><b>Apply Today</b></h3>
             <div className="container">
@@ -56,7 +51,6 @@ function Apply() {
                 </div>
             </div>
         </div>
-        </>
     )
 }
 

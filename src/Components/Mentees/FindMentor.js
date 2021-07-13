@@ -1,16 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {
-   // Button,
-   Card
-} from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import team from "../../Images/team.png";
-import MenteeLoginHeader from "../Mentees/MenteeLoginHeader";
 
 function FindMentor() {
    return(
-     <>
-      <MenteeLoginHeader />
-      <hr />
        <div>
            <div className="container">
                <div className="row">
@@ -86,7 +79,6 @@ function FindMentor() {
                </div>
            </div>
        </div>
-       </>
    )
 }
  

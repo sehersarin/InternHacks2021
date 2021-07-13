@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { useAuth } from '../../context/AuthContext';
 import { useHistory } from 'react-router-dom';
 import { Alert } from '@material-ui/lab';
-import Header from "../../Components/Header";
 
 function SignUp() {
     const emailRef = useRef()
@@ -47,9 +46,6 @@ function SignUp() {
     }
 
     return(
-        <>
-        <Header />
-        <hr />
         <div className="container">
             <h2 className="text-center mt-5 mb-5"><b>Create An Account</b></h2>
             <div className="container">
@@ -84,16 +80,12 @@ function SignUp() {
 
                     {error && <Alert severity="error" className="mb-4">{error}</Alert>}
 
-                    {/* <div className="d-flex justify-content-center" style={{backgroundColor: "red"}}> */}
-                        {/* <a className="navb h1" href="#">{" "} */}
-                            <button className="btn btn-dark text-warning rounded p-3"
-                                disabled={loading}
-                                type="submit"
-                                style={{ width: "380px" }}>
-                                <h4><b>Sign up</b></h4>
-                            </button>
-                        {/* </a> */}
-                    {/* </div> */}
+                    <button className="btn btn-dark text-warning rounded p-3"
+                        disabled={loading}
+                        type="submit"
+                        style={{ width: "380px" }}>
+                        <h4><b>Sign up</b></h4>
+                    </button>
                 </form>
 
                 <div className="row mt-3" style={{justifyContent: 'center'}}>
@@ -106,23 +98,8 @@ function SignUp() {
                         <p style={{fontSize: "14px"}}>Log in</p>
                     </a>
                 </div>
-
-                {/* <div className="row mt-3" style={{justifyContent: 'center'}}>
-                    <p style={{fontSize: "14px"}}>Already have an account?</p>
-                    <div className="col">
-                        <div className="container" style={{textAlign: "right"}}>
-                            <a 
-                                className="navb" 
-                                href="/sign-in"
-                                style={{textDecorationLine: 'underline'}}>{" "}
-                                <p style={{fontSize: "14px"}}>Log in</p>
-                            </a>
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </div>
-        </>
     )
 }
 

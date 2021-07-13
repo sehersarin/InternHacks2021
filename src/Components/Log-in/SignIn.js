@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useAuth } from '../../context/AuthContext';
 import { useHistory } from "react-router-dom";
-import Header from "../../Components/Header";
 import { Alert } from '@material-ui/lab';
 
 function SignIn() {
@@ -32,9 +31,6 @@ function SignIn() {
     }
 
     return(
-        <>
-        <Header />
-        <hr />
         <div className="container">
             <h2 className="text-center mt-5 mb-5"><b>Welcome Back!</b></h2>
             {/* <p className="text-center mt-4 mb-5">A place to meet other students preparing for technical
@@ -100,7 +96,6 @@ function SignIn() {
                 </div>
             </div>
         </div>
-        </>
     )
 }
 

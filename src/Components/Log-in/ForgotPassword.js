@@ -1,4 +1,3 @@
-import Header from "../Header";
 import { useAuth } from '../../context/AuthContext';
 import { useRef, useState } from 'react';
 import { Alert } from '@material-ui/lab';
@@ -26,9 +25,6 @@ function ForgotPassword() {
     }
 
     return(
-        <>
-        <Header />
-        <hr />
         <div className="container">
             <h2 className="text-center mt-5 mb-3"><b>Forgot Password?</b></h2>
             <p className="text-center mb-5">Enter in your email address that's associated
@@ -74,7 +70,6 @@ function ForgotPassword() {
                 </div>
             </div>
         </div>
-        </>
     )
 }
 
