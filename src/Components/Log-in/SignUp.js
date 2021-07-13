@@ -88,7 +88,7 @@ function SignUp() {
                     </button>
                 </form>
 
-                <div className="row mt-3" style={{justifyContent: 'center'}}>
+                <div className="row mt-3 mb-5" style={{justifyContent: 'center'}}>
                     <p style={{fontSize: "14px"}}>Already have an account?</p>
                     <div className='grid' style={{width: '180px'}}/>
                     <a 

@@ -33,8 +33,6 @@ function SignIn() {
     return(
         <div className="container">
             <h2 className="text-center mt-5 mb-5"><b>Welcome Back!</b></h2>
-            {/* <p className="text-center mt-4 mb-5">A place to meet other students preparing for technical
-            interviews and to find mentorship</p> */}
             <div className="container">
                 <form onSubmit={handleSubmit} 
                     style={{display: "grid", 
@@ -85,7 +83,7 @@ function SignIn() {
                     </button>
                 </form>
                 
-                <div className="row mt-3" style={{justifyContent: 'center'}}>
+                <div className="row mt-3 mb-5" style={{justifyContent: 'center'}}>
                     <p className="mr-5" style={{fontSize: "14px"}}>New to Tech Mentor Match?</p>
                     <a 
                         className="navb ml-5" 
