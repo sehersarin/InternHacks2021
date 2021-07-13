@@ -25,12 +25,12 @@ function SignUp() {
             return setError('Password cannot be empty')
         }
 
-        if(passwordRef.current.value.length <= 6) {
-            return setError('Password needs to be at least 6 characters')
-        }
-
         if(passwordRef.current.value !== passwordConfirmRef.current.value) {
             return setError('Passwords do not match')
+        }
+
+        if(passwordRef.current.value.length <= 6) {
+            return setError('Password needs to be at least 6 characters')
         }
 
         try {
