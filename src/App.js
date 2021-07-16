@@ -9,7 +9,9 @@ import SignIn from "./Components/Log-in/SignIn";
 import SignUp from "./Components/Log-in/SignUp";
 import ForgotPassword from "./Components/Log-in/ForgotPassword";
 import MenteeProfile from "./Components/Mentees/MenteeProfile";
-import MenteeEditProfile from "./Components/Mentees/MenteeEditProfile";
+import MenteeEditSettings from "./Components/Mentees/MenteeEditSettings";
+import Schedule from "./Components/Mentees/Schedule";
+import Chat from "./Components/Mentees/Chat";
 // import Route from "./Components/Route";
 import { AuthProvider } from "./context/AuthContext";
 import { BrowserRouter as Router, Route, Switch, withRouter } from "react-router-dom"
@@ -27,16 +29,20 @@ function App() {
         <hr />
         <Switch>
           <Route exact path='/' component={withRouter(Body)}/>
+
           <PublicRoute exact path='/become-mentor' component={withRouter(BecomeMentor)}/>
           <PublicRoute exact path='/sign-in' component={withRouter(SignIn)} />
           <PublicRoute exact path='/sign-up' component={withRouter(SignUp)}/>
           <PublicRoute exact path='/forgot-password' component={withRouter(ForgotPassword)} />
+
           <PrivateRoute exact path='/apply' component={withRouter(Apply)} />
           <PrivateRoute exact path='/find-mentor' component={withRouter(FindMentor)}/>
           <PrivateRoute exact path='/study' component={withRouter(Study)} />
           <PrivateRoute exact path='/community' component={withRouter(Community)} />
+          <PrivateRoute exact path='/schedule' component={withRouter(Schedule)} />
+          <PrivateRoute exact path='/chat' component={withRouter(Chat)} />
           <PrivateRoute exact path='/mentee-profile' component={withRouter(MenteeProfile)} />
-          <PrivateRoute exact path='/mentee-edit-profile' component={withRouter(MenteeEditProfile)} />
+          <PrivateRoute exact path='/mentee-edit-settings' component={withRouter(MenteeEditSettings)} />
         </Switch>
       </div>
     </AuthProvider>
