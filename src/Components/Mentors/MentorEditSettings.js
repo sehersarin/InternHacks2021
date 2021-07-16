@@ -3,7 +3,7 @@ import { useAuth } from '../../context/AuthContext';
 import { Link, useHistory } from "react-router-dom";
 import { Alert } from '@material-ui/lab';
 
-function MenteeEditProfile() {
+function MentorEditSettings() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
@@ -45,7 +45,7 @@ function MenteeEditProfile() {
         }
 
         Promise.all(promises).then(() => {
-            history.push('/mentee-profile');
+            history.push('/mentor-profile');
         }).catch(() => {
             setError('Failed to edit profile')
         }).finally(() => {
@@ -55,7 +55,7 @@ function MenteeEditProfile() {
 
     return(
         <div className="container">
-            <h2 className="text-center mt-5 mb-5"><b>Edit Profile</b></h2>
+            <h2 className="text-center mt-5 mb-5"><b>Edit Settings</b></h2>
             <div className="container">
                 <form onSubmit={handleSubmit} 
                     style={{display: "grid", 
@@ -87,20 +87,20 @@ function MenteeEditProfile() {
 
                     {error && <Alert severity="error" className="mb-4">{error}</Alert>}
 
-                    <button className="btn btn-dark text-warning rounded p-3"
+                    <button className="btn text-warning rounded p-3"
                         disabled={loading}
                         type="submit"
-                        style={{ width: "380px" }}>
-                        <h4><b>Update Profile</b></h4>
+                        style={{ width: "380px", backgroundColor: "#14213D" }}>
+                        <h4><b>Update Settings</b></h4>
                     </button>
                 </form>
 
-                <div className="row mt-3" style={{justifyContent: 'center'}}>
+                <div className="row mt-3 mb-5" style={{justifyContent: 'center'}}>
                     <a 
                         className="navb" 
-                        href="/mentee-profile"
+                        href="/mentor-profile"
                         style={{textDecorationLine: 'underline'}}>{" "}
-                        <p style={{fontSize: "14px"}}>Go Back</p>
+                        <p style={{fontSize: "16px"}}><b>Go Back</b></p>
                     </a>
                 </div>
             </div>
@@ -108,4 +108,4 @@ function MenteeEditProfile() {
     )
 }
 
-export default MenteeEditProfile;
+export default MentorEditSettings;
