@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useAuth } from '../../context/AuthContext';
 import { useHistory } from "react-router-dom";
-import Header from "../../Components/Header";
 import { Alert } from '@material-ui/lab';
 
 function SignIn() {
@@ -24,7 +23,7 @@ function SignIn() {
             setError('')
             setLoading(true)
             await signin(emailRef.current.value, passwordRef.current.value)
-            history.push("/find-mentor")
+            history.push("/")
         } catch {
             setError('Failed to sign in')
         }
@@ -32,15 +31,9 @@ function SignIn() {
     }
 
     return(
-        <>
-        <Header />
-        <hr />
         <div className="container">
             <h2 className="text-center mt-5 mb-5"><b>Welcome Back!</b></h2>
-            {/* <p className="text-center mt-4 mb-5">A place to meet other students preparing for technical
-            interviews and to find mentorship</p> */}
             <div className="container">
-                {error && <alert type="danger">{error}</alert>}
                 <form onSubmit={handleSubmit} 
                     style={{display: "grid", 
                             justifyContent: "center"}}>
@@ -82,16 +75,16 @@ function SignIn() {
 
                     {error && <Alert severity="error" className="mb-4">{error}</Alert>}
 
-                    <button className="btn btn-dark text-warning rounded p-3"
+                    <button className="btn text-warning rounded p-3"
                         disabled={loading}
                         type="submit"
-                        style={{ width: "380px" }}>
+                        style={{ width: "380px", backgroundColor: "#14213D" }}>
                         <h4><b>Sign in</b></h4>
                     </button>
                 </form>
                 
-                <div className="row mt-3">
-                    <p className="ml-5 mr-5" style={{fontSize: "14px"}}>New to Tech Mentor Match?</p>
+                <div className="row mt-3 mb-5" style={{justifyContent: 'center'}}>
+                    <p className="mr-5" style={{fontSize: "14px"}}>New to Tech Mentor Match?</p>
                     <a 
                         className="navb ml-5" 
                         href="/sign-up"
@@ -101,7 +94,6 @@ function SignIn() {
                 </div>
             </div>
         </div>
-        </>
     )
 }
 

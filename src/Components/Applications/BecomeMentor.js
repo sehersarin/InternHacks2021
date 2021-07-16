@@ -1,13 +1,9 @@
 import businessplan from "../../Images/businessplan.png";
 import friends from "../../Images/friends.png";
 import nomsg from "../../Images/nomsg.png";
-import Header from "../../Components/Header";
  
 function BecomeMentor() {
     return(
-        <>
-        <Header />
-        <hr />
         <div className="container">
             <h2 className="mt-5"><b>Simple ways to get started</b></h2>
             <div className="row" style={{justifyContent: "center"}}>
@@ -40,7 +36,8 @@ function BecomeMentor() {
                         in the door in tech!</p>
                         <a className="navbar-brand navb h1" href="/sign-up">
                             {" "}
-                            <button className="btn btn-dark text-warning rounded p-3 mb-2 w-95">
+                            <button className="btn text-warning rounded p-3 mb-2 w-95"
+                                style={{backgroundColor: "#14213D"}}>
                                 <h4><b>Apply to become a Mentor</b></h4>
                             </button>
                         </a>
@@ -48,7 +45,6 @@ function BecomeMentor() {
                 </div>
             </div>
         </div>
-        </>
     )
 }
  
