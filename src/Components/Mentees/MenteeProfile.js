@@ -57,7 +57,13 @@ function MenteeProfile() {
             <span className="font-weight-bold"> SWE, Blockchain Technology</span>
           </div>
           <hr />
-          <h5>Industry</h5>
+          <div className="d-flex">
+            <h5>Industry</h5>
+            <button className="ml-auto btn text-warning" style={{backgroundColor: "#14213D", 
+              borderRadius: "10px", width: "60px", height: "40px"}}>
+              <b>Edit</b>
+            </button>
+          </div>
           <div className="d-flex">
             <p className="mt-3 mr-3">
               <span className="border border-warning shadow pl-4 pr-4 pt-2 pb-2"
@@ -65,13 +71,15 @@ function MenteeProfile() {
                 <b>Technology</b>
               </span>
             </p>
+          </div>
+          <hr />
+          <div className="d-flex">
+            <h5>Interests</h5>
             <button className="ml-auto btn text-warning" style={{backgroundColor: "#14213D", 
-              borderRadius: "10px"}}>
+              borderRadius: "10px", width: "60px", height: "40px"}}>
               <b>Edit</b>
             </button>
           </div>
-          <hr />
-          <h5>Interests</h5>
           <div className="d-flex">
             <p className="mt-3 mr-3">
               <span className="border border-warning shadow pl-4 pr-4 pt-2 pb-2"
@@ -90,9 +98,6 @@ function MenteeProfile() {
                 <b>Gaming</b>
               </span>
             </p>
-            <button className="ml-auto btn text-warning" style={{backgroundColor: "#14213D", borderRadius: "10px"}}>
-              <b>Edit</b>
-            </button>
           </div>
           <hr />
         </div>
