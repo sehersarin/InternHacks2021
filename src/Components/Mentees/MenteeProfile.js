@@ -4,31 +4,57 @@ import portrait from "../../Images/portrait.png";
 import work from "../../Images/work.png";
 import sentiment from "../../Images/sentiment_very_satisfied.png";
 import chat from "../../Images/chat.png";
+import dots from "../../Images/dots.png";
+import favorite from "../../Images/favorite.png";
 
 function MenteeProfile() {
   return (
     <div>
-      <div className="container">
-        <div className="row p-3">
-          <div className="col-3">
+        <div className="row pl-4 pt-2 pb-2">
+          <div className="col-2">
             <img
               src={portrait}
-              class="img-thumbnail h-80 w-75 border border-warning"
+              class="img-thumbnail h-80 w-75 border border-warning shadow"
               style={{borderRadius: "10px"}}
               alt="..."
             ></img>
           </div>
-          <div className="col">
-            <h2>Hi, I'm John Doe</h2>
-            <p>Software Engineering Intern</p>
-            <h5>Facebook</h5>
+          <div className="row" style={{marginLeft: "-30px", width: "1100px"}}>
+            <div className="col">
+              <br/>
+              <h2>Hi, I'm John Doe (He/Him)</h2>
+              <p>Software Engineering Intern</p>
+              <h5>Facebook</h5>
+            </div>
           </div>
-          <div className="col-3">
-            <a className="navb btn text-warning pl-3 pr-3" href="#" style={{backgroundColor: "#14213D", borderRadius: "10px"}}>
-              <b>Book a Session</b>
-            </a>
-          </div>
-        </div>
+          <button className="navb btn text-warning" href="#" 
+            style={{
+              backgroundColor: "#14213D", 
+              borderRadius: "10px",
+              height: "40px", 
+              marginLeft: "-65px"
+            }}>
+              <img src={dots} style={{height: "25px", marginTop: "-5px"}}/>
+          </button>
+          <button className="navb btn text-warning" href="#" 
+            style={{
+              backgroundColor: "#14213D", 
+              borderRadius: "10px",
+              height: "40px", 
+              width: "45px",
+              marginLeft: "10px"
+            }}>
+              <img src={favorite} style={{height: "35px", marginTop: "-5px", marginLeft: "-10px"}}/>
+          </button>
+          <a className="navb btn text-warning" href="#" 
+            style={{
+              backgroundColor: "#14213D", 
+              borderRadius: "10px",
+              height: "40px", 
+              marginLeft: "10px"
+            }}>
+            <b>Book a Session</b>
+          </a>
       </div>
       <hr />
       <div className="row m-2 p-2">
