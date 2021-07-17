@@ -1,5 +1,6 @@
 import Header from "./Components/Header";
 import Body from "./Components/Body";
+import AboutUs from "./Components/AboutUs";
 import FindMentor from "./Components/Mentees/FindMentor";
 import Study from "./Components/Mentees/Study";
 import Community from "./Components/Mentees/Community";
@@ -31,6 +32,7 @@ function App() {
           <Route exact path='/' component={withRouter(Body)}/>
 
           <PublicRoute exact path='/become-mentor' component={withRouter(BecomeMentor)}/>
+          <PublicRoute exact path='/about-us' component={withRouter(AboutUs)} />
           <PublicRoute exact path='/sign-in' component={withRouter(SignIn)} />
           <PublicRoute exact path='/sign-up' component={withRouter(SignUp)}/>
           <PublicRoute exact path='/forgot-password' component={withRouter(ForgotPassword)} />

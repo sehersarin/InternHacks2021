@@ -19,8 +19,8 @@ const MainHeader = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link navb" href="/find-mentor">
-                <b>Find a Mentor</b>
+              <a className="nav-link navb" href="/about-us">
+                <b>About Us</b>
               </a>
             </li>
             <li className="nav-item">
