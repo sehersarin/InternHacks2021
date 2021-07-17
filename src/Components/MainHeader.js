@@ -23,10 +23,10 @@ const MainHeader = () => {
                 <b>About Us</b>
               </a>
             </li>
-            <li className="nav-item">
+            <li className="nav-item ml-2">
               <a
-                className="nav-link navb btn text-warning rounded"
-                style={{backgroundColor: "#14213D"}}
+                className="nav-link navb btn text-warning"
+                style={{backgroundColor: "#14213D", borderRadius: "10px"}}
                 href="/sign-in"
               >
                 <b>Sign in</b>

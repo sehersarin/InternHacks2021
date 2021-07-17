@@ -75,10 +75,10 @@ function SignIn() {
 
                     {error && <Alert severity="error" className="mb-4">{error}</Alert>}
 
-                    <button className="btn text-warning rounded p-3"
+                    <button className="btn text-warning p-3"
                         disabled={loading}
                         type="submit"
-                        style={{ width: "380px", backgroundColor: "#14213D" }}>
+                        style={{ width: "380px", backgroundColor: "#14213D", borderRadius: "10px" }}>
                         <h4><b>Sign in</b></h4>
                     </button>
                 </form>

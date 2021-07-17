@@ -20,8 +20,8 @@ const LoggedInBody = () => {
                 <div className="d-flex justify-content-center p-3 ">
                   <a className="navbar-brand navb h1" href="/find-mentor">
                     {" "}
-                    <button className="btn text-warning rounded p-4 mt-2 w-95 fs-2"
-                      style={{backgroundColor: "#14213D"}}>
+                    <button className="btn text-warning p-4 mt-2 w-95 fs-2"
+                      style={{backgroundColor: "#14213D", borderRadius: "10px"}}>
                       <h4><b>Get Started</b></h4>
                     </button>
                   </a>
