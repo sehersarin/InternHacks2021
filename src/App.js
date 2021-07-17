@@ -3,7 +3,7 @@ import Body from "./Components/Body";
 import AboutUs from "./Components/AboutUs";
 import FindMentor from "./Components/Mentees/FindMentor";
 import Study from "./Components/Mentees/Study";
-import Community from "./Components/Mentees/Community";
+// import Community from "./Components/Mentees/Community";
 import Apply from "./Components/Applications/Apply";
 import BecomeMentor from "./Components/Applications/BecomeMentor";
 import SignIn from "./Components/Log-in/SignIn";
@@ -40,7 +40,7 @@ function App() {
           <PrivateRoute exact path='/apply' component={withRouter(Apply)} />
           <PrivateRoute exact path='/find-mentor' component={withRouter(FindMentor)}/>
           <PrivateRoute exact path='/study' component={withRouter(Study)} />
-          <PrivateRoute exact path='/community' component={withRouter(Community)} />
+          {/* <PrivateRoute exact path='/community' component={withRouter(Community)} /> */}
           <PrivateRoute exact path='/schedule' component={withRouter(Schedule)} />
           <PrivateRoute exact path='/chat' component={withRouter(Chat)} />
           <PrivateRoute exact path='/mentee-profile' component={withRouter(MenteeProfile)} />

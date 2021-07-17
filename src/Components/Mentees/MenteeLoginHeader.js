@@ -62,11 +62,11 @@ function MenteeLoginHeader() {
                 <b>Study</b>
               </a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link navb" href="/community">
                 <b>Community</b>
               </a>
-            </li>
+            </li> */}
             <li className="nav-item">
               <a className="nav-link navb" href="/chat">
                 <img src={chat} style={{height: '21px', width: '18px', marginRight: '7px'}}/>
