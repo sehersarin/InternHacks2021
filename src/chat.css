@@ -1,0 +1,138 @@
+.content {
+  height: 515px;
+  width: 1130px;
+  overflow: auto;
+}
+
+.texts {
+    font-size: 15px;
+    margin-top: 10px; 
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-wrap: break-word;
+  }
+  
+  .msg {
+    display: flex;
+    padding: 20px 10px 0 20px;
+    margin: 20px;
+    border-radius: 3000px;
+    box-shadow: 0 0 10px rgb(164, 164, 164);
+    align-items: center;
+  }
+  
+  .box1 {
+    width: auto;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #FFF;
+    padding: 10px;
+    text-align: left;
+    color: black;
+    position: relative;
+    float: right;
+    border-radius: 10px;
+    box-shadow: none;
+    z-index: 1;
+    margin-right: 15px;
+    margin-top: 0px;
+  }
+
+  .box2 {
+    width: auto;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #FCA311;
+    padding: 10px;
+    text-align: left;
+    color: black;
+    position: relative;
+    float: left;
+    border-radius: 10px;
+    box-shadow: none;
+    z-index: 1;
+    margin-top: 0px;
+  }
+
+  .sent::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 4vh solid transparent;
+    border-right: 4vh solid transparent;
+    border-top: 10vh solid #fff;
+    /* right: -15px;
+    top: -25px; */
+    right: -15px;
+    bottom: -25px;
+    transform: rotate(-40deg);
+    z-index: -1;
+  }
+  
+  .received::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 4vh solid transparent;
+    border-right: 4vh solid transparent;
+    border-top: 10vh solid #FCA311;
+    top: -25px;
+    left: -15px;
+    transform: rotate(140deg);
+    z-index: -1;
+  }
+
+  .sendMsg {
+    position: fixed;
+    display: flex;
+    width: 1128px;
+    bottom: 0;
+    z-index: 1;
+    border-top: 1px solid lightgray;
+    margin-left: -30px;
+    padding: 10px;
+    padding-bottom: 30px;
+    background-color: #14213D;
+  }
+  
+  .msgs {
+    margin: 110px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  @media (max-width: 775px) {
+    p {
+      font-size: 20px;
+    }
+    .sent {
+      padding: 10px 10px 0 10px;
+    }
+    .received {
+      padding: 10px 10px 0 10px;
+    }
+    img {
+      height: 35px;
+      margin-top: -10px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    p {
+      font-size: 15px;
+    }
+    .sent {
+      padding: 7px 7px 0 7px;
+    }
+    .received {
+      padding: 7px 7px 0 7px;
+    }
+    img {
+      height: 30px;
+      margin-top: -7px;
+    }
+  }
+  
