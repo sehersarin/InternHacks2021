@@ -1,4 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import portrait from "../../Images/portrait.png";
+import chat from "../../Images/chat.png";
+import work from "../../Images/work.png";
 import {
   // Button,
   Card,
@@ -51,6 +54,7 @@ function FindMentor() {
             >
               <b style={{ fontColor: "#14213D" }}>Interests</b>
             </button>
+
             <button
               className="dropdown-toggle"
               style={{
@@ -64,6 +68,7 @@ function FindMentor() {
             >
               <b style={{ fontColor: "#14213D" }}>Expertise</b>
             </button>
+
             <button
               className="ml-2"
               style={{
@@ -95,24 +100,94 @@ function FindMentor() {
           </div>
         </div>
         <hr />
-        <div className="container m-5" style={{ backgroundColor: "red" }}>
-          <div className="row">
-            {/* <div className="m-5"> */}
-            <Card style={{ width: "16rem", marginRight: "20px" }}>
-              <Card.Img variant="top" src={team} />
-              <Card.Body>
-                <Card.Title>John Doe</Card.Title>
-                <Card.Text>Biography</Card.Text>
-              </Card.Body>
-            </Card>
-            <Card style={{ width: "16rem" }}>
-              <Card.Img variant="top" src={team} />
-              <Card.Body>
-                <Card.Title>Jane Doe</Card.Title>
-                <Card.Text>Biography</Card.Text>
-              </Card.Body>
-            </Card>
-            {/* </div> */}
+        <div className="container d-flex">
+          <div className="card m-2" style={{ width: "18rem" }}>
+            <img
+              className="card-img-top bg-secondary"
+              src={portrait}
+              alt="Card image cap"
+            />
+            <div className="card-body">
+              <h5 className="card-title">Jhon Doe</h5>
+              <p className="card-text">Apple</p>
+              <p>
+                <img src={work} style={{ marginRight: "10px" }} /> Software
+                Engineering
+              </p>
+              <p>
+                <img
+                  src={chat}
+                  style={{ marginLeft: "3px", marginRight: "10px" }}
+                />{" "}
+                Career advice, interview techniques.
+              </p>
+            </div>
+          </div>
+          <div className="card m-2" style={{ width: "18rem" }}>
+            <img
+              className="card-img-top bg-secondary"
+              src={portrait}
+              alt="Card image cap"
+            />
+            <div className="card-body">
+              <h5 className="card-title">Jane Doal</h5>
+              <p className="card-text">Facebook</p>
+              <p>
+                <img src={work} style={{ marginRight: "10px" }} /> Technical
+                Productor Manager
+              </p>
+              <p>
+                <img
+                  src={chat}
+                  style={{ marginLeft: "3px", marginRight: "10px" }}
+                />{" "}
+                Career advice, interview techniques.
+              </p>
+            </div>
+          </div>
+          <div className="card m-2" style={{ width: "18rem" }}>
+            <img
+              className="card-img-top bg-secondary"
+              src={portrait}
+              alt="Card image cap"
+            />
+            <div className="card-body">
+              <h5 className="card-title">Ashley Yoon</h5>
+              <p className="card-text">Google</p>
+              <p>
+                <img src={work} style={{ marginRight: "10px" }} /> Software
+                Engineering
+              </p>
+              <p>
+                <img
+                  src={chat}
+                  style={{ marginLeft: "3px", marginRight: "10px" }}
+                />{" "}
+                Career advice, interview techniques.
+              </p>
+            </div>
+          </div>
+          <div className="card m-2" style={{ width: "18rem" }}>
+            <img
+              className="card-img-top bg-secondary"
+              src={portrait}
+              alt="Card image cap"
+            />
+            <div className="card-body">
+              <h5 className="card-title">Josua Parker</h5>
+              <p className="card-text">Amazon</p>
+              <p>
+                <img src={work} style={{ marginRight: "10px" }} /> Software
+                Engineering
+              </p>
+              <p>
+                <img
+                  src={chat}
+                  style={{ marginLeft: "3px", marginRight: "10px" }}
+                />{" "}
+                Career advice, interview techniques.
+              </p>
+            </div>
           </div>
         </div>
       </div>
