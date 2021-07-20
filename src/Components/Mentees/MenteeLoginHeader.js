@@ -15,11 +15,22 @@ import { useAuth } from "../../context/AuthContext";
 import { useHistory } from "react-router-dom";
 import { Alert } from "@material-ui/lab";
 
+const Notifs = () => {
+  return(
+    <div className="container" style={{backgroundColor: "red"}}>
+      <p>Test</p>
+    </div>
+  );
+}
+
 function MenteeLoginHeader() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [error, setError] = useState("");
   const { signout } = useAuth();
   const history = useHistory();
+  const [showNotifs, setShowNotifs] = React.useState(false);
+  
+  const onClick = () => setShowNotifs(true);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -73,7 +84,13 @@ function MenteeLoginHeader() {
               </a>
             </li>
             <li className="nav-item">
-              <img src={notification} style={{height: '28px', width: '28px', marginBottom: '-13px', marginRight: '2px'}}/>
+              <button style={{backgroundColor: "transparent", borderColor: "transparent", marginTop: "-10px"}} 
+                onClick={onClick}>
+                <img src={notification} 
+                  style={{height: '28px', width: '28px', marginBottom: '-13px', marginRight: '2px'}}
+                  />
+                { showNotifs ? <Notifs /> : null }
+              </button>
             </li>
             <li className="nav-item">
               <a className="nav-link navb" href="/schedule">

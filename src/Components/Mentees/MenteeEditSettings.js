@@ -87,10 +87,10 @@ function MenteeEditProfile() {
 
                     {error && <Alert severity="error" className="mb-4">{error}</Alert>}
 
-                    <button className="btn btn-dark text-warning rounded p-3"
+                    <button className="btn btn-dark text-warning p-3"
                         disabled={loading}
                         type="submit"
-                        style={{ width: "380px" }}>
+                        style={{ width: "380px", backgroundColor: "#14213D", borderRadius: "10px" }}>
                         <h4><b>Update Profile</b></h4>
                     </button>
                 </form>
