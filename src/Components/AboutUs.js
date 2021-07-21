@@ -29,10 +29,10 @@ function AboutUs() {
                 <img src={aboutUs} style={{width: "60%"}}/>
             </div>
         </div>
-        <div className="d-flex justify-content-center p-3 ">
+        <div className="d-flex justify-content-center p-5">
             <a className="navbar-brand navb h1" href="/sign-up">
             {" "}
-            <button className="btn text-warning pl-3 pr-3 pt-2 pb-2 mt-2 w-95 fs-2"
+            <button className="btn text-warning pl-4 pr-4 pt-3 pb-3 mt-2 w-95 fs-2"
                 style={{backgroundColor: "#14213D", borderRadius: "10px"}}>
                 <h4><b>Join our Program</b></h4>
             </button>
