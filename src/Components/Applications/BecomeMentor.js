@@ -36,7 +36,8 @@ function BecomeMentor() {
                         in the door in tech!</p>
                         <a className="navbar-brand navb h1" href="/sign-up">
                             {" "}
-                            <button className="btn btn-dark text-warning rounded p-3 mb-2 w-95">
+                            <button className="btn text-warning p-3 mb-2 w-95"
+                                style={{backgroundColor: "#14213D", borderRadius: "10px"}}>
                                 <h4><b>Apply to become a Mentor</b></h4>
                             </button>
                         </a>

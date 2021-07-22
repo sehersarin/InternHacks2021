@@ -2,13 +2,18 @@ function Study() {
   return (
     <div>
       <div className="d-flex ml-4 mt-4">
-        <h2><b>Dashboard</b></h2>
-        <div className="container" style={{textAlign: "right"}}>
+        <h2>
+          <b>Dashboard</b>
+        </h2>
+        <div
+          className="container"
+          style={{ textAlign: "right", marginRight: "-5px" }}
+        >
           <a className="navbar-brand navb h1" href="#">
-              {" "}
-              <p className="text-warning">
-                <b>Bookmarked challenges</b>
-              </p>
+            {" "}
+            <p className="text-warning">
+              <b>Bookmarked challenges</b>
+            </p>
           </a>
         </div>
       </div>
@@ -19,9 +24,18 @@ function Study() {
           <div className="card-body border border-gray shadow rounded m-4">
             <p>Interview Preparation</p>
             <h2>Interview Preparation Kit</h2>
-            <a href="#" className="btn btn-dark text-warning rounded mt-3">
-              <button className="btn btn-dark text-warning rounded pl-4 pr-4 w-95">
-                  <h4><b>View</b></h4>
+            <a
+              href="/Interview"
+              className="btn text-warning mt-3"
+              style={{ backgroundColor: "#14213D", borderRadius: "10px" }}
+            >
+              <button
+                className="btn text-warning rounded pl-4 pr-4 w-95"
+                style={{ backgroundColor: "#14213D" }}
+              >
+                <h4>
+                  <b>View</b>
+                </h4>
               </button>
             </a>
           </div>
@@ -30,9 +44,18 @@ function Study() {
           <div className="card-body border border-gray shadow m-4">
             <p>New Skill</p>
             <h2>Add your first skill</h2>
-            <a href="#" className="btn btn-dark text-warning rounded mt-3">
-              <button className="btn btn-dark text-warning rounded pl-4 pr-4 w-95">
-                  <h4><b>Explore Skills</b></h4>
+            <a
+              href="#"
+              className="btn text-warning mt-3"
+              style={{ backgroundColor: "#14213D", borderRadius: "10px" }}
+            >
+              <button
+                className="btn text-warning rounded pl-4 pr-4 w-95"
+                style={{ backgroundColor: "#14213D" }}
+              >
+                <h4>
+                  <b>Explore Skills</b>
+                </h4>
               </button>
             </a>
           </div>
