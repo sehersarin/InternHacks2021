@@ -12,7 +12,7 @@ import ForgotPassword from "./Components/Log-in/ForgotPassword";
 import MenteeProfile from "./Components/Mentees/MenteeProfile";
 import MenteeEditSettings from "./Components/Mentees/MenteeEditSettings";
 import Schedule from "./Components/Mentees/Schedule";
-import Chat from "./Components/Mentees/Chat";
+import Chat from "./Components/Mentees/ChatFunction/Chat";
 // import Route from "./Components/Route";
 import { AuthProvider } from "./context/AuthContext";
 import {

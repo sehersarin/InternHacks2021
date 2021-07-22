@@ -1,6 +1,6 @@
 .content {
-  height: 515px;
-  width: 1130px;
+  height: 100%;
+  width: 100%;
   overflow: auto;
 }
 
@@ -85,10 +85,12 @@
   }
 
   .sendMsg {
+    height: 80px;
+    width: 100%;
     position: fixed;
+    /* align-items: left; */
     display: flex;
-    width: 1128px;
-    bottom: 0;
+    bottom: 20px;
     z-index: 1;
     border-top: 1px solid lightgray;
     margin-left: -30px;

@@ -1,15 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { db, auth } from '../../firebase';
+import { db, auth } from '../../../firebase';
 import SendMessage from './SendMessage';
-import '../../chat.css';
-import firebase from 'firebase';
+import '../../../chat.css';
 
-import profilePic from '../../Images/profilePic.png';
-import duo from '../../Images/duo.png';
-import phone from '../../Images/phone.png';
+import profilePic from '../../../Images/profilePic.png';
+import duo from '../../../Images/duo.png';
+import phone from '../../../Images/phone.png';
 
 function Chat() {  
-    const scroll=useRef();  
     const[messages, setMessages] = useState([]);
 
     useEffect(() => {
@@ -28,7 +26,7 @@ function Chat() {
 
     return(
         <div>
-            <div className="container" style={{backgroundColor: "#14213D", width: "100%", height: "500px"}}>
+            <div className="container" style={{backgroundColor: "#14213D", width: "100%", height: "550px"}}>
                 <div className="content">
                 <div className="col">
                     <div className="row pt-5 pl-5 pr-5">
