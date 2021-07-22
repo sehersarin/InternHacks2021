@@ -19,6 +19,13 @@ function SignUp() {
             return setError('Email cannot be empty')
         }
 
+        if(emailRef.current.value.substring(
+                emailRef.current.value.length-4, emailRef.current.value.length)
+                !==".edu") {
+            console.log(emailRef.current.value.substring(emailRef.current.value.length-4, emailRef.current.value.length));
+            return setError('Please sign up with a university email.');
+        }
+
         if(passwordRef.current.value.length==0 || 
             passwordConfirmRef.current.value.length==0) {
             return setError('Password cannot be empty')
