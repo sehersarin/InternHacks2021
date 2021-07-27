@@ -1,7 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import portrait from "../../Images/portrait.png";
-import chat from "../../Images/chat.png";
-import work from "../../Images/work.png";
+import FindMentorComponent from "./FindMentorComponent";
 import {
   // Button,
   Card,
@@ -9,6 +7,33 @@ import {
 import team from "../../Images/team.png";
 
 function FindMentor() {
+  const profesionals = [
+    {
+      name: "Jhon Doe",
+      industry: "Apple",
+      position: "Software Engineering",
+    },
+    {
+      name: "Jane Doal",
+      industry: "Facebook",
+      position: " Technical Productor Manager",
+    },
+    {
+      name: "Ashley Yoon",
+      industry: "Google",
+      position: "Software Engineering",
+    },
+    {
+      name: "Josua Parker",
+      industry: "Amazon",
+      position: "Software Engineering",
+    },
+    {
+      name: "Sebas Muriel",
+      industry: "Google",
+      position: "Technical Productor Manager",
+    },
+  ];
   return (
     <>
       <div>
@@ -54,20 +79,21 @@ function FindMentor() {
             >
               <b style={{ fontColor: "#14213D" }}>Interests</b>
             </button>
-
-            <button
-              className="dropdown-toggle"
-              style={{
-                backgroundColor: "transparent",
-                borderWidth: "1px",
-                borderRadius: "30px",
-                borderStyle: "solid",
-                borderColor: "#14213D",
-                padding: "13px",
-              }}
-            >
-              <b style={{ fontColor: "#14213D" }}>Expertise</b>
-            </button>
+            <div className="btn-group">
+              <button
+                className="dropdown-toggle"
+                style={{
+                  backgroundColor: "transparent",
+                  borderWidth: "1px",
+                  borderRadius: "30px",
+                  borderStyle: "solid",
+                  borderColor: "#14213D",
+                  padding: "13px",
+                }}
+              >
+                <b style={{ fontColor: "#14213D" }}>Expertise</b>
+              </button>
+            </div>
 
             <button
               className="ml-2"
@@ -100,95 +126,20 @@ function FindMentor() {
           </div>
         </div>
         <hr />
-        <div className="container d-flex">
-          <div className="card m-2" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top bg-secondary"
-              src={portrait}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Jhon Doe</h5>
-              <p className="card-text">Apple</p>
-              <p>
-                <img src={work} style={{ marginRight: "10px" }} /> Software
-                Engineering
-              </p>
-              <p>
-                <img
-                  src={chat}
-                  style={{ marginLeft: "3px", marginRight: "10px" }}
-                />{" "}
-                Career advice, interview techniques.
-              </p>
-            </div>
-          </div>
-          <div className="card m-2" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top bg-secondary"
-              src={portrait}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Jane Doal</h5>
-              <p className="card-text">Facebook</p>
-              <p>
-                <img src={work} style={{ marginRight: "10px" }} /> Technical
-                Productor Manager
-              </p>
-              <p>
-                <img
-                  src={chat}
-                  style={{ marginLeft: "3px", marginRight: "10px" }}
-                />{" "}
-                Career advice, interview techniques.
-              </p>
-            </div>
-          </div>
-          <div className="card m-2" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top bg-secondary"
-              src={portrait}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Ashley Yoon</h5>
-              <p className="card-text">Google</p>
-              <p>
-                <img src={work} style={{ marginRight: "10px" }} /> Software
-                Engineering
-              </p>
-              <p>
-                <img
-                  src={chat}
-                  style={{ marginLeft: "3px", marginRight: "10px" }}
-                />{" "}
-                Career advice, interview techniques.
-              </p>
-            </div>
-          </div>
-          <div className="card m-2" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top bg-secondary"
-              src={portrait}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Josua Parker</h5>
-              <p className="card-text">Amazon</p>
-              <p>
-                <img src={work} style={{ marginRight: "10px" }} /> Software
-                Engineering
-              </p>
-              <p>
-                <img
-                  src={chat}
-                  style={{ marginLeft: "3px", marginRight: "10px" }}
-                />{" "}
-                Career advice, interview techniques.
-              </p>
-            </div>
-          </div>
+
+        <div className="ml-5">
+          {profesionals.map((person, i) => {
+            return (
+              <div className="d-inline-flex">
+                <FindMentorComponent
+                  key={i}
+                  name={person.name}
+                  industry={person.industry}
+                  position={person.position}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
