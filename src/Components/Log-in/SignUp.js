@@ -19,6 +19,15 @@ function SignUp() {
             return setError('Email cannot be empty')
         }
 
+        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(emailRef.current.value)) {
+            return setError('You have entered an invalid email address')
+        }
+
+        if(emailRef.current.value.substring(emailRef.current.value.length-4, emailRef.current.value.length)!=='.edu') {
+            console.log(emailRef.current.value.substring(emailRef.current.value.length-4, emailRef.current.value.length));
+            return setError('You can only sign up with a university email')
+        }
+
         if(passwordRef.current.value.length==0 || 
             passwordConfirmRef.current.value.length==0) {
             return setError('Password cannot be empty')
@@ -31,8 +40,6 @@ function SignUp() {
         if(passwordRef.current.value.length <= 6) {
             return setError('Password needs to be at least 6 characters')
         }
-
-        /* check for email validation */
 
         try {
             setError('')

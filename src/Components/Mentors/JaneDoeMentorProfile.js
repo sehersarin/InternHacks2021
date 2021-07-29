@@ -7,7 +7,7 @@ import chat from "../../Images/chat.png";
 import dots from "../../Images/dots.png";
 import favorite from "../../Images/favorite.png";
 
-function MentorProfile() {
+function JaneDoeMentorProfile() {
   return (
     <div>
         <div className="row pl-4 pt-2 pb-2">
@@ -23,8 +23,8 @@ function MentorProfile() {
             <div className="col">
               <br/>
               <h2 style={{marginTop: "-20px"}}><b>Mentor</b></h2>
-              <h2>Hi, I'm John Doe (He/Him)</h2>
-              <p>Software Engineering Intern</p>
+              <h2>Hi, I'm Jane Doe (She/Her)</h2>
+              <p>Product Management Intern</p>
               <h5>Facebook</h5>
             </div>
           </div>
@@ -33,7 +33,7 @@ function MentorProfile() {
               backgroundColor: "#14213D", 
               borderRadius: "10px",
               height: "40px", 
-              marginLeft: "-65px"
+              marginLeft: "-140px"
             }}>
               <img src={dots} style={{height: "25px", marginTop: "-5px"}}/>
           </button>
@@ -62,8 +62,9 @@ function MentorProfile() {
         <div className="col-5">
           <h5 className="pb-2"><b>About me</b></h5>
           <p style={{fontSize: "18px"}}>
-            I am a junior at Columbia University majoring in Computer Science. I
-            have previously interned at Apple and now at Facebook...
+            Hello! I'm Jane Doe and I'm a senior majoring in Computer Science at
+            the University of Michigan. I've previously interned at Apple as a SWE
+            and now at Facebook...
             <a href="#" style={{color: "#FCA311"}}>
               See more
             </a>
@@ -77,11 +78,11 @@ function MentorProfile() {
           </div>
           <div className="pt-3 pb-3">
             <img src={chat} style={{marginLeft: "3px", marginRight: "10px"}}/> I'm fluent in
-            <span className="font-weight-bold"> Java, C, C++</span>
+            <span className="font-weight-bold"> React, Kotlin, Python</span>
           </div>
           <div className="pb-3">
             <img src={work} style={{marginRight: "10px"}}/> Ask me about
-            <span className="font-weight-bold"> SWE, Blockchain Technology</span>
+            <span className="font-weight-bold"> PM, SWE, Web Dev</span>
           </div>
           <hr />
           <div className="d-flex">
@@ -95,7 +96,7 @@ function MentorProfile() {
             <p className="mt-3 mr-3">
               <span className="border border-warning shadow pl-4 pr-4 pt-2 pb-2"
                 style={{borderRadius: "10px"}}>
-                <b>Technology</b>
+                <b>Tech</b>
               </span>
             </p>
           </div>
@@ -111,18 +112,18 @@ function MentorProfile() {
             <p className="mt-3 mr-3">
               <span className="border border-warning shadow pl-4 pr-4 pt-2 pb-2"
                 style={{borderRadius: "10px"}}>
-                <b>Deep Learning</b>
+                <b>Machine Learning</b>
               </span>
             </p>
             <p className="m-3">
               <span className="border border-warning shadow pl-4 pr-4 pt-2 pb-2"
                 style={{borderRadius: "10px"}}>
-                <b>AI & Ethics</b>
+                <b>Web Dev</b>
               </span>
             </p>
             <p className="m-3">
               <span className="border border-warning shadow pl-4 pr-4 pt-2 pb-2" style={{borderRadius: "10px"}}>
-                <b>Gaming</b>
+                <b>Mobile Dev</b>
               </span>
             </p>
           </div>
@@ -153,4 +154,4 @@ function MentorProfile() {
   );
 }
 
-export default MentorProfile;
+export default JaneDoeMentorProfile;

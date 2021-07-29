@@ -1,198 +1,323 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import portrait from "../../Images/portrait.png";
-import chat from "../../Images/chat.png";
-import work from "../../Images/work.png";
-import {
-  // Button,
-  Card,
-} from "react-bootstrap";
-import team from "../../Images/team.png";
+import React, { useState, useEffect } from "react";
+import FindMentorComponent from "./FindMentorComponent";
+import { 
+  professionals, 
+  availabilityOptions, 
+  industryOptions,
+  interestOptions,
+  expertiseOptions,
+} from './arrays';
 
 function FindMentor() {
-  return (
-    <>
-      <div>
-        <div className="container">
-          <div className="row d-flex">
-            {/* <div className="mt-4 mb-4 mr-2"> */}
-            <button
-              className="mr-2 dropdown-toggle"
-              style={{
-                backgroundColor: "transparent",
-                borderWidth: "1px",
-                borderRadius: "30px",
-                borderStyle: "solid",
-                borderColor: "#14213D",
-                padding: "13px",
-              }}
-            >
-              <b style={{ fontColor: "#14213D" }}>Availability</b>
-            </button>
-            <button
-              className="mr-2 dropdown-toggle"
-              style={{
-                backgroundColor: "transparent",
-                borderWidth: "1px",
-                borderRadius: "30px",
-                borderStyle: "solid",
-                borderColor: "#14213D",
-                padding: "13px",
-              }}
-            >
-              <b style={{ fontColor: "#14213D" }}>Industry</b>
-            </button>
-            <button
-              className="mr-2 dropdown-toggle"
-              style={{
-                backgroundColor: "transparent",
-                borderWidth: "1px",
-                borderRadius: "30px",
-                borderStyle: "solid",
-                borderColor: "#14213D",
-                padding: "13px",
-              }}
-            >
-              <b style={{ fontColor: "#14213D" }}>Interests</b>
-            </button>
+    const [availabilityChecked, setAvailabilityChecked] = useState(
+      new Array(availabilityOptions.length).fill(false)
+    )
+    
+    const [industryChecked, setIndustryChecked] = useState(
+      new Array(industryOptions.length).fill(false)
+    )
 
-            <button
-              className="dropdown-toggle"
-              style={{
-                backgroundColor: "transparent",
-                borderWidth: "1px",
-                borderRadius: "30px",
-                borderStyle: "solid",
-                borderColor: "#14213D",
-                padding: "13px",
-              }}
-            >
-              <b style={{ fontColor: "#14213D" }}>Expertise</b>
-            </button>
+    const [interestChecked, setInterestChecked] = useState(
+      new Array(interestOptions.length).fill(false)
+    )
+    
+    const [expertiseChecked, setExpertiseChecked] = useState(
+      new Array(expertiseOptions.length).fill(false)
+    )
 
-            <button
-              className="ml-2"
-              style={{
-                backgroundColor: "transparent",
-                borderWidth: "1px",
-                borderRadius: "30px",
-                borderStyle: "solid",
-                borderColor: "#14213D",
-                padding: "13px",
-              }}
-            >
-              <b style={{ fontColor: "#14213D" }}>More Filters</b>
-            </button>
-            <button
-              className="ml-auto"
-              style={{
-                backgroundColor: "transparent",
-                borderWidth: "1px",
-                borderRadius: "30px",
-                borderStyle: "solid",
-                borderColor: "#14213D",
-                padding: "13px",
-                alignItems: "right",
-              }}
-            >
-              <b style={{ fontColor: "#14213D" }}>Sort Mentors By</b>
-            </button>
-            {/* </div> */}
+    const [monChecked, setMonChecked] = useState(false);
+
+    useEffect(() => {
+      console.log(monChecked);
+    }, [monChecked]);
+
+    const handleAvailabilityChange = (pos) => {
+      const updateAvailability = availabilityChecked.map((item, index) =>
+        index===pos ? !item : item
+      );
+
+      console.log(updateAvailability);
+      setAvailabilityChecked(updateAvailability);
+
+      for(let i=0; i<updateAvailability.length; i++) {
+        if(updateAvailability[i]===true) {
+          if(availabilityOptions[i]===availabilityOptions[0]) {
+            console.log(availabilityOptions[0]);
+            setMonChecked(current => !current)
+          }
+        } else {
+          setMonChecked(current => !current)
+        }
+      }
+    }
+
+    const handleIndustryChange = (pos) => {
+      const updateIndustry = industryChecked.map((item, index) =>
+        index===pos ? !item : item
+      );
+
+      console.log(updateIndustry);
+      setIndustryChecked(updateIndustry);
+    }
+
+    const handleInterestChange = (pos) => {
+      const updateInterest = interestChecked.map((item, index) =>
+        index===pos ? !item : item
+      );
+
+      console.log(updateInterest);
+      setInterestChecked(updateInterest);
+    }
+
+    const handleExpertiseChange = (pos) => {
+      const updateExpertise = expertiseChecked.map((item, index) =>
+        index===pos ? !item : item
+      );
+
+      console.log(updateExpertise);
+      setExpertiseChecked(updateExpertise);
+    }
+
+    return (
+      <>
+        <div>
+          <div className="container">
+            <div className="row d-flex">
+            <div className="btn-group"></div>
+              <div className="dropdown">
+                <button
+                  className="dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style={{
+                    backgroundColor: "transparent",
+                    borderWidth: "1px",
+                    borderRadius: "30px",
+                    borderStyle: "solid",
+                    borderColor: "#14213D",
+                    padding: "13px",
+                  }}
+                >
+                  <b style={{ fontColor: "#14213D" }}>Availability</b>
+                </button>
+                <ul
+                  className="dropdown-menu checkbox-menu allow-focus"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  {availabilityOptions.map(({ day }, index) => {
+                    return(
+                      <li key={index} className="dropdown-item">
+                        <label>
+                        <input type="checkbox" 
+                          value={day}
+                          style={{marginRight: "10px"}}
+                          checked={availabilityChecked[index]}
+                          onClick={() => handleAvailabilityChange(index)}
+                        />{day}
+                        </label>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+
+              <div className="btn-group"></div>
+              <div className="dropdown">
+                <button
+                  className="ml-2 dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style={{
+                    backgroundColor: "transparent",
+                    borderWidth: "1px",
+                    borderRadius: "30px",
+                    borderStyle: "solid",
+                    borderColor: "#14213D",
+                    padding: "13px",
+                  }}
+                >
+                  <b style={{ fontColor: "#14213D" }}>Industry</b>
+                </button>
+                <ul
+                  className="dropdown-menu checkbox-menu allow-focus"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  {industryOptions.map(({ industry }, index) => {
+                    return(
+                      <li key={index} className="dropdown-item">
+                        <label>
+                        <input type="checkbox" 
+                          value={industry}
+                          style={{marginRight: "10px"}}
+                          checked={industryChecked[index]}
+                          onClick={() => handleIndustryChange(index)}
+                        />{industry}
+                        </label>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+
+              <div className="btn-group"></div>
+              <div className="dropdown">
+                <button
+                  className="ml-2 dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style={{
+                    backgroundColor: "transparent",
+                    borderWidth: "1px",
+                    borderRadius: "30px",
+                    borderStyle: "solid",
+                    borderColor: "#14213D",
+                    padding: "13px",
+                  }}
+                >
+                  <b style={{ fontColor: "#14213D" }}>Interests</b>
+                </button>
+                <ul
+                  className="dropdown-menu checkbox-menu allow-focus"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  {interestOptions.map(({ interest }, index) => {
+                    return(
+                      <li key={index} className="dropdown-item">
+                        <label>
+                        <input type="checkbox" 
+                          value={interest}
+                          style={{marginRight: "10px"}}
+                          checked={interestChecked[index]}
+                          onClick={() => handleInterestChange(index)}
+                        />{interest}
+                        </label>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+
+              <div className="btn-group"></div>
+              <div className="dropdown">
+                <button
+                  className="ml-2 dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style={{
+                    backgroundColor: "transparent",
+                    borderWidth: "1px",
+                    borderRadius: "30px",
+                    borderStyle: "solid",
+                    borderColor: "#14213D",
+                    padding: "13px",
+                  }}
+                >
+                  <b style={{ fontColor: "#14213D" }}>Expertise</b>
+                </button>
+                <ul
+                  className="dropdown-menu checkbox-menu allow-focus"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  {expertiseOptions.map(({ expertise }, index) => {
+                    return(
+                      <li key={index} className="dropdown-item">
+                        <label>
+                        <input type="checkbox" 
+                          value={expertise}
+                          style={{marginRight: "10px"}}
+                          checked={expertiseChecked[index]}
+                          onClick={() => handleExpertiseChange(index)}
+                        />{expertise}
+                        </label>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+              
+              <button
+                className="ml-2"
+                style={{
+                  backgroundColor: "transparent",
+                  borderWidth: "1px",
+                  borderRadius: "30px",
+                  borderStyle: "solid",
+                  borderColor: "#14213D",
+                  padding: "13px",
+                }}
+              >
+                <b style={{ fontColor: "#14213D" }}>More Filters</b>
+              </button>
+              <button
+                className="ml-auto"
+                style={{
+                  backgroundColor: "transparent",
+                  borderWidth: "1px",
+                  borderRadius: "30px",
+                  borderStyle: "solid",
+                  borderColor: "#14213D",
+                  padding: "13px",
+                  alignItems: "right",
+                }}
+              >
+                <b style={{ fontColor: "#14213D" }}>Sort Mentors By</b>
+              </button>
+            </div>
+          </div>
+          <hr />
+
+          <div className="ml-5">
+            {monChecked===true ? 
+              <div className="d-inline-flex">
+                <FindMentorComponent
+                  key={0}
+                  firstName={professionals[0].firstName}
+                  lastName={professionals[0].lastName}
+                  company={professionals[0].company}
+                  position={professionals[0].position}
+                />
+                <FindMentorComponent
+                  key={2}
+                  firstName={professionals[2].firstName}
+                  lastName={professionals[2].lastName}
+                  company={professionals[2].company}
+                  position={professionals[2].position}
+                />
+              </div>
+              :
+              <>
+              {professionals.map((person, i) => {
+                return (
+                  <div className="d-inline-flex">
+                    <FindMentorComponent
+                      key={i}
+                      firstName={person.firstName}
+                      lastName={person.lastName}
+                      company={person.company}
+                      position={person.position}
+                    />
+                  </div>
+                );
+              })}
+              </>
+            }
           </div>
         </div>
-        <hr />
-        <div className="container d-flex">
-          <div className="card m-2" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top bg-secondary"
-              src={portrait}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Jhon Doe</h5>
-              <p className="card-text">Apple</p>
-              <p>
-                <img src={work} style={{ marginRight: "10px" }} /> Software
-                Engineering
-              </p>
-              <p>
-                <img
-                  src={chat}
-                  style={{ marginLeft: "3px", marginRight: "10px" }}
-                />{" "}
-                Career advice, interview techniques.
-              </p>
-            </div>
-          </div>
-          <div className="card m-2" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top bg-secondary"
-              src={portrait}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Jane Doal</h5>
-              <p className="card-text">Facebook</p>
-              <p>
-                <img src={work} style={{ marginRight: "10px" }} /> Technical
-                Productor Manager
-              </p>
-              <p>
-                <img
-                  src={chat}
-                  style={{ marginLeft: "3px", marginRight: "10px" }}
-                />{" "}
-                Career advice, interview techniques.
-              </p>
-            </div>
-          </div>
-          <div className="card m-2" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top bg-secondary"
-              src={portrait}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Ashley Yoon</h5>
-              <p className="card-text">Google</p>
-              <p>
-                <img src={work} style={{ marginRight: "10px" }} /> Software
-                Engineering
-              </p>
-              <p>
-                <img
-                  src={chat}
-                  style={{ marginLeft: "3px", marginRight: "10px" }}
-                />{" "}
-                Career advice, interview techniques.
-              </p>
-            </div>
-          </div>
-          <div className="card m-2" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top bg-secondary"
-              src={portrait}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Josua Parker</h5>
-              <p className="card-text">Amazon</p>
-              <p>
-                <img src={work} style={{ marginRight: "10px" }} /> Software
-                Engineering
-              </p>
-              <p>
-                <img
-                  src={chat}
-                  style={{ marginLeft: "3px", marginRight: "10px" }}
-                />{" "}
-                Career advice, interview techniques.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+      </>
+    );
 }
 
 export default FindMentor;

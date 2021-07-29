@@ -1,43 +1,12 @@
-import React, { Component, useState } from "react";
-import { Menu, MenuItem, Button, Link, TextField } from '@material-ui/core';
+import React from "react";
+import Calendar from '../Calendar/Calendar';
 
-import Done from "../../Images/Done.png";
 import portrait from "../../Images/portrait.png";
 import work from "../../Images/work.png";
-import sentiment from "../../Images/sentiment_very_satisfied.png";
 import chat from "../../Images/chat.png";
-import dots from "../../Images/dots.png";
 import favorite from "../../Images/favorite.png";
 
-// class MenteeProfile extends Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       firstName: 'Ashley',
-//       lastName: 'Yoon',
-//       university: 'Georgetown University',
-//       year: 'Freshman',
-//     }
-//   }
-
-  // [anchorEl, setAnchorEl] = React.useState(null);
-
-  // handleClick = (event) => {
-  //   setAnchorEl(event.currentTarget);
-  // }
-
-  // handleClose = () => {
-  //   setAnchorEl(null);
-  // }
-
-  // handleChange(first, last, colz) {
-  //   this.setState({firstName: first, lastName: last, 
-  //     university: college, year: year})
-  // }
-
-  function MenteeProfile() {
-
-  // render() {
+function MenteeProfile() {
     return (
       <div>
           <div className="row pl-4 pt-2 pb-2">
@@ -53,60 +22,11 @@ import favorite from "../../Images/favorite.png";
               <div className="col">
                 <br/>
                 <h2 style={{marginTop: "-20px"}}><b>Mentee</b></h2>
-                {/* <div className="row" style={{backgroundColor: "red"}}>
-                  <h2>Hi, I'm 
-                    <TextField
-                      margin="normal"
-                      fullWidth
-                      name="name"
-                      placeholder="Jane Doe"
-                    />
-                  </h2>
-                </div> */}
-                {/* <h2>Hi, I'm {this.state.firstName}{' '}{this.state.lastName}</h2>
-                <p>{this.state.university}</p>
-                <p>{this.state.year}</p> */}
-                <h2>Hi, I'm Jane Doe</h2>
+                <h2>Hi, I'm Ashley Yoon</h2>
                 <p>Georgetown University</p>
                 <p>Class of 2024</p>
               </div>
             </div>
-            {/* <Button 
-              aria-controls="simple-menu" 
-              aria-haspopup="true" 
-              onClick={handleClick}
-              style={{
-                backgroundColor: "#14213D", 
-                borderRadius: "10px",
-                height: "40px", 
-                marginLeft: "-65px"
-              }}  
-            >
-              <img src={dots} style={{height: "25px", marginTop: "-5px"}}/>
-            </Button>
-
-            <Menu 
-              id="simple-menu"
-              anchorEl={handleMenu.anchorEl}
-              keepMounted
-              open={Boolean(handleMenu.anchorEl)}
-              onClose={handleClose}
-            >
-              <MenuItem 
-                onClick={handleClose}>
-                  <a href="twitter.com" 
-                    style={{color: 'black', textDecorationLine: 'none'}}>
-                    Connect on Twitter
-                  </a>
-              </MenuItem>
-              <MenuItem 
-                onClick={handleClose}>
-                  <a href="linkedin.com" 
-                    style={{color: 'black', textDecorationLine: 'none'}}>
-                    Connect on LinkedIn
-                  </a>
-              </MenuItem>
-            </Menu> */}
             <button className="navb btn text-warning"
               style={{
                 backgroundColor: "#14213D", 
@@ -136,7 +56,7 @@ import favorite from "../../Images/favorite.png";
             </p>
             <div className="pt-3 pb-3">
               <img src={chat} style={{marginLeft: "3px", marginRight: "10px"}}/> I'm fluent in
-              <span className="font-weight-bold"> Java, C, C++</span>
+              <span className="font-weight-bold"> Java, Python</span>
             </div>
             <div className="pb-3">
               <img src={work} style={{marginRight: "10px"}}/> I'm looking for a career in
@@ -170,7 +90,7 @@ import favorite from "../../Images/favorite.png";
               <p className="mt-3 mr-3">
                 <span className="border border-warning shadow pl-4 pr-4 pt-2 pb-2"
                   style={{borderRadius: "10px"}}>
-                  <b>Deep Learning</b>
+                  <b>Machine Learning</b>
                 </span>
               </p>
               <p className="m-3">
@@ -181,7 +101,7 @@ import favorite from "../../Images/favorite.png";
               </p>
               <p className="m-3">
                 <span className="border border-warning shadow pl-4 pr-4 pt-2 pb-2" style={{borderRadius: "10px"}}>
-                  <b>Gaming</b>
+                  <b>Healthcare</b>
                 </span>
               </p>
             </div>
@@ -198,19 +118,18 @@ import favorite from "../../Images/favorite.png";
                 width: "100%", height: "10px"}}>
                   <p style={{fontSize: "20px", fontWeight: "700", color: "white",
                       marginTop: "-5px"}}>
-                    Mon, Jul 12 - Fri, Jul 16
+                    Mon, Jul 26 - Sun, Aug 1
                   </p>
               </div>
               <div className="card-body" style={{backgroundColor: "#fff", overflow: "auto",
                 width: "100%", height: "320px", marginBottom: "-15px"}}>
-                  {/* schedule here */}
+                  <Calendar />
               </div>
             </div>
           </div>
         </div>
       </div>
     );
-  // }
 }
 
 export default MenteeProfile;
