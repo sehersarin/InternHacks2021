@@ -19,6 +19,10 @@ function SignIn() {
             return setError('Email and/or password is empty')
         }
 
+        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(emailRef.current.value)) {
+            return setError('You have entered an invalid email address')
+        }
+
         try {
             setError('')
             setLoading(true)

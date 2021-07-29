@@ -16,7 +16,7 @@ function Apply() {
                                 </p>
                                 <div className="d-flex justify-content-center p-3 ">
                                     <a className="navbar-brand navb h1" 
-                                        href="https://docs.google.com/forms/d/e/1FAIpQLSeMVuZCK3jHdMzpr7--HgFBao2ZdyhD0hdP79eoE8mdmnLgVA/viewform?usp=sf_link">
+                                        href="/">
                                         {" "}
                                         <button className="btn text-warning p-4 mt-2 w-95 fs-2"
                                             style={{backgroundColor: "#14213D", borderRadius: "10px"}}>
@@ -39,7 +39,7 @@ function Apply() {
                                 </p>
                                 <div className="d-flex justify-content-center p-3 ">
                                     <a className="navbar-brand navb h1" 
-                                        href="https://docs.google.com/forms/d/e/1FAIpQLSehkXYwEJeSQwMXC7U_ezLxKfo2822XxTBIjdcrkTnOn1eoGQ/viewform?usp=sf_link">
+                                        href="/">
                                         {" "}
                                         <button className="btn text-warning p-4 mt-2 w-95 fs-2"
                                             style={{backgroundColor: "#14213D", borderRadius: "10px"}}>

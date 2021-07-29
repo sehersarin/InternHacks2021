@@ -66,6 +66,7 @@ function App() {
             />
 
             <PrivateRoute exact path="/apply" component={withRouter(Apply)} />
+
             <PrivateRoute
               exact
               path="/find-mentor"
@@ -101,7 +102,7 @@ function App() {
             />
 
             <PrivateRoute exact path="/study" component={withRouter(Study)} />
-            {/* <PrivateRoute exact path='/community' component={withRouter(Community)} /> */}
+
             <PrivateRoute
               exact
               path="/schedule"
