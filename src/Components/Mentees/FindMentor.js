@@ -29,9 +29,14 @@ function FindMentor() {
       position: "Software Engineering",
     },
     {
-      name: "Sebas Muriel",
+      name: "Seher Sarin",
       industry: "Google",
       position: "Technical Productor Manager",
+    },
+    {
+      name: "Adhel Geng",
+      industry: "Google",
+      position: "Product Designer",
     },
   ];
   return (
@@ -79,9 +84,15 @@ function FindMentor() {
             >
               <b style={{ fontColor: "#14213D" }}>Interests</b>
             </button>
-            <div className="btn-group">
+            <div className="btn-group"></div>
+            <div className="dropdown">
               <button
-                className="dropdown-toggle"
+                className=" dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
                 style={{
                   backgroundColor: "transparent",
                   borderWidth: "1px",
@@ -93,8 +104,30 @@ function FindMentor() {
               >
                 <b style={{ fontColor: "#14213D" }}>Expertise</b>
               </button>
+              <div
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <a
+                  className="dropdown-item"
+                  href="/find-mentor/software-engineer"
+                >
+                  Software Engineering
+                </a>
+                <a
+                  className="dropdown-item"
+                  href="/find-mentor/productor-manager"
+                >
+                  Technical Productor Manager
+                </a>
+                <a
+                  className="dropdown-item"
+                  href="/find-mentor/productor-designer"
+                >
+                  Product Designer
+                </a>
+              </div>
             </div>
-
             <button
               className="ml-2"
               style={{

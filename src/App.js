@@ -13,6 +13,9 @@ import MenteeProfile from "./Components/Mentees/MenteeProfile";
 import MenteeEditSettings from "./Components/Mentees/MenteeEditSettings";
 import Schedule from "./Components/Mentees/Schedule";
 import Chat from "./Components/Mentees/Chat";
+import SoftwareEngineer from "./Components/Mentees/SoftwareEngineer";
+import ProductorManager from "./Components/Mentees/ProductorManager";
+import ProductDesigner from "./Components/Mentees/ProductDesigner";
 // import Route from "./Components/Route";
 import { AuthProvider } from "./context/AuthContext";
 import {
@@ -26,6 +29,11 @@ import PublicRoute from "./Components/PublicRoute";
 import Interview from "./Components/Mentees/Interview";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
+import $ from "jquery";
+import Popper from "popper.js";
 
 function App() {
   return (
@@ -61,6 +69,22 @@ function App() {
               path="/find-mentor"
               component={withRouter(FindMentor)}
             />
+            <PrivateRoute
+              exact
+              path="/find-mentor/software-engineer"
+              component={withRouter(SoftwareEngineer)}
+            />
+            <PrivateRoute
+              exact
+              path="/find-mentor/productor-manager"
+              component={withRouter(ProductorManager)}
+            />
+            <PrivateRoute
+              exact
+              path="/find-mentor/productor-designer"
+              component={withRouter(ProductDesigner)}
+            />
+
             <PrivateRoute exact path="/study" component={withRouter(Study)} />
             {/* <PrivateRoute exact path='/community' component={withRouter(Community)} /> */}
             <PrivateRoute
