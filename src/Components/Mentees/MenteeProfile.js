@@ -1,6 +1,8 @@
 import React, { Component, useState } from "react";
 import { Menu, MenuItem, Button, Link, TextField } from '@material-ui/core';
 
+import Calendar from '../Calendar/Calendar';
+
 import Done from "../../Images/Done.png";
 import portrait from "../../Images/portrait.png";
 import work from "../../Images/work.png";
@@ -9,35 +11,7 @@ import chat from "../../Images/chat.png";
 import dots from "../../Images/dots.png";
 import favorite from "../../Images/favorite.png";
 
-// class MenteeProfile extends Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       firstName: 'Ashley',
-//       lastName: 'Yoon',
-//       university: 'Georgetown University',
-//       year: 'Freshman',
-//     }
-//   }
-
-  // [anchorEl, setAnchorEl] = React.useState(null);
-
-  // handleClick = (event) => {
-  //   setAnchorEl(event.currentTarget);
-  // }
-
-  // handleClose = () => {
-  //   setAnchorEl(null);
-  // }
-
-  // handleChange(first, last, colz) {
-  //   this.setState({firstName: first, lastName: last, 
-  //     university: college, year: year})
-  // }
-
-  function MenteeProfile() {
-
-  // render() {
+function MenteeProfile() {
     return (
       <div>
           <div className="row pl-4 pt-2 pb-2">
@@ -198,19 +172,18 @@ import favorite from "../../Images/favorite.png";
                 width: "100%", height: "10px"}}>
                   <p style={{fontSize: "20px", fontWeight: "700", color: "white",
                       marginTop: "-5px"}}>
-                    Mon, Jul 12 - Fri, Jul 16
+                    Mon, Jul 26 - Sun, Aug 1
                   </p>
               </div>
               <div className="card-body" style={{backgroundColor: "#fff", overflow: "auto",
                 width: "100%", height: "320px", marginBottom: "-15px"}}>
-                  {/* schedule here */}
+                  <Calendar />
               </div>
             </div>
           </div>
         </div>
       </div>
     );
-  // }
 }
 
 export default MenteeProfile;

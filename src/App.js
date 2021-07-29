@@ -11,7 +11,7 @@ import SignUp from "./Components/Log-in/SignUp";
 import ForgotPassword from "./Components/Log-in/ForgotPassword";
 import MenteeProfile from "./Components/Mentees/MenteeProfile";
 import MenteeEditSettings from "./Components/Mentees/MenteeEditSettings";
-import Schedule from "./Components/Mentees/Schedule";
+import Schedule from "./Components/Calendar/Schedule";
 import Chat from "./Components/Mentees/Chat";
 import SoftwareEngineer from "./Components/Mentees/SoftwareEngineer";
 import ProductorManager from "./Components/Mentees/ProductorManager";
