@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-
 import UseCalendar from './UseCalendar';
 
 const Calendar = () => {

@@ -1,5 +1,5 @@
 import FindMentorComponent from "./FindMentorComponent";
-const profesionals = [
+const professionals = [
   {
     name: "Jhon Doe",
     industry: "Apple",
@@ -31,7 +31,7 @@ const profesionals = [
     position: "Product Designer",
   },
 ];
-const productor = profesionals.filter((person) => {
+const productor = professionals.filter((person) => {
   return person.position == "Technical Productor Manager";
 });
 

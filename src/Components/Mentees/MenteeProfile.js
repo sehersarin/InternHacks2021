@@ -1,14 +1,9 @@
-import React, { Component, useState } from "react";
-import { Menu, MenuItem, Button, Link, TextField } from '@material-ui/core';
-
+import React from "react";
 import Calendar from '../Calendar/Calendar';
 
-import Done from "../../Images/Done.png";
 import portrait from "../../Images/portrait.png";
 import work from "../../Images/work.png";
-import sentiment from "../../Images/sentiment_very_satisfied.png";
 import chat from "../../Images/chat.png";
-import dots from "../../Images/dots.png";
 import favorite from "../../Images/favorite.png";
 
 function MenteeProfile() {
@@ -27,60 +22,11 @@ function MenteeProfile() {
               <div className="col">
                 <br/>
                 <h2 style={{marginTop: "-20px"}}><b>Mentee</b></h2>
-                {/* <div className="row" style={{backgroundColor: "red"}}>
-                  <h2>Hi, I'm 
-                    <TextField
-                      margin="normal"
-                      fullWidth
-                      name="name"
-                      placeholder="Jane Doe"
-                    />
-                  </h2>
-                </div> */}
-                {/* <h2>Hi, I'm {this.state.firstName}{' '}{this.state.lastName}</h2>
-                <p>{this.state.university}</p>
-                <p>{this.state.year}</p> */}
                 <h2>Hi, I'm Ashley Yoon</h2>
                 <p>Georgetown University</p>
                 <p>Class of 2024</p>
               </div>
             </div>
-            {/* <Button 
-              aria-controls="simple-menu" 
-              aria-haspopup="true" 
-              onClick={handleClick}
-              style={{
-                backgroundColor: "#14213D", 
-                borderRadius: "10px",
-                height: "40px", 
-                marginLeft: "-65px"
-              }}  
-            >
-              <img src={dots} style={{height: "25px", marginTop: "-5px"}}/>
-            </Button>
-
-            <Menu 
-              id="simple-menu"
-              anchorEl={handleMenu.anchorEl}
-              keepMounted
-              open={Boolean(handleMenu.anchorEl)}
-              onClose={handleClose}
-            >
-              <MenuItem 
-                onClick={handleClose}>
-                  <a href="twitter.com" 
-                    style={{color: 'black', textDecorationLine: 'none'}}>
-                    Connect on Twitter
-                  </a>
-              </MenuItem>
-              <MenuItem 
-                onClick={handleClose}>
-                  <a href="linkedin.com" 
-                    style={{color: 'black', textDecorationLine: 'none'}}>
-                    Connect on LinkedIn
-                  </a>
-              </MenuItem>
-            </Menu> */}
             <button className="navb btn text-warning"
               style={{
                 backgroundColor: "#14213D", 

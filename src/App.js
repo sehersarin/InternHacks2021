@@ -3,7 +3,6 @@ import Body from "./Components/Body";
 import AboutUs from "./Components/AboutUs";
 import FindMentor from "./Components/Mentees/FindMentor";
 import Study from "./Components/Mentees/Study";
-// import Community from "./Components/Mentees/Community";
 import Apply from "./Components/Applications/Apply";
 import BecomeMentor from "./Components/Applications/BecomeMentor";
 import SignIn from "./Components/Log-in/SignIn";
@@ -18,7 +17,6 @@ import JaneDoe from "./Components/Mentors/JaneDoeMentorProfile";
 import SoftwareEngineer from "./Components/Mentees/SoftwareEngineer";
 import ProductorManager from "./Components/Mentees/ProductorManager";
 import ProductDesigner from "./Components/Mentees/ProductDesigner";
-// import Route from "./Components/Route";
 import { AuthProvider } from "./context/AuthContext";
 import {
   BrowserRouter as Router,
@@ -34,8 +32,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
-import $ from "jquery";
-import Popper from "popper.js";
 
 function App() {
   return (

@@ -1,13 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import FindMentorComponent from "./FindMentorComponent";
-import {
-  // Button,
-  Card,
-} from "react-bootstrap";
-import team from "../../Images/team.png";
-
-import JohnDoe from '../Mentors/JohnDoeMentorProfile';
-import JaneDoe from '../Mentors/JaneDoeMentorProfile';
 
 function FindMentor() {
   const professionals = [

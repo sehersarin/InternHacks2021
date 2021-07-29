@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { db, auth } from '../../firebase';
 import SendMessage from './SendMessage';
 import '../../chat.css';
-import firebase from 'firebase';
 
 import profilePic from '../../Images/profilePic.png';
 import duo from '../../Images/duo.png';
