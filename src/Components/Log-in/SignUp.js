@@ -15,7 +15,7 @@ function SignUp() {
     async function handleSubmit(e) {
         e.preventDefault()
 
-        if(emailRef.current.value.length==0) {
+        if(emailRef.current.value.length===0) {
             return setError('Email cannot be empty')
         }
 
@@ -28,8 +28,8 @@ function SignUp() {
             return setError('You can only sign up with a university email')
         }
 
-        if(passwordRef.current.value.length==0 || 
-            passwordConfirmRef.current.value.length==0) {
+        if(passwordRef.current.value.length===0 || 
+            passwordConfirmRef.current.value.length===0) {
             return setError('Password cannot be empty')
         }
 

@@ -14,8 +14,8 @@ function SignIn() {
     async function handleSubmit(e) {
         e.preventDefault()
 
-        if(emailRef.current.value.length==0 || 
-            passwordRef.current.value.length==0) {
+        if(emailRef.current.value.length===0 || 
+            passwordRef.current.value.length===0) {
             return setError('Email and/or password is empty')
         }
 

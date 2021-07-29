@@ -32,7 +32,7 @@ const profesionals = [
   },
 ];
 const software = profesionals.filter((person) => {
-  return person.position == "Software Engineering";
+  return person.position === "Software Engineering";
 });
 
 const SoftwareEngineer = () => {

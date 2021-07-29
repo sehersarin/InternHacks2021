@@ -14,9 +14,6 @@ import Schedule from "./Components/Calendar/Schedule";
 import Chat from "./Components/Mentees/Chat";
 import JohnDoe from "./Components/Mentors/JohnDoeMentorProfile";
 import JaneDoe from "./Components/Mentors/JaneDoeMentorProfile";
-import SoftwareEngineer from "./Components/Mentees/SoftwareEngineer";
-import ProductorManager from "./Components/Mentees/ProductorManager";
-import ProductDesigner from "./Components/Mentees/ProductDesigner";
 import { AuthProvider } from "./context/AuthContext";
 import {
   BrowserRouter as Router,
@@ -79,22 +76,6 @@ function App() {
               exact
               path="/jane-doe"
               component={withRouter(JaneDoe)}
-            />
-
-            <PrivateRoute
-              exact
-              path="/find-mentor/software-engineer"
-              component={withRouter(SoftwareEngineer)}
-            />
-            <PrivateRoute
-              exact
-              path="/find-mentor/productor-manager"
-              component={withRouter(ProductorManager)}
-            />
-            <PrivateRoute
-              exact
-              path="/find-mentor/productor-designer"
-              component={withRouter(ProductDesigner)}
             />
 
             <PrivateRoute exact path="/study" component={withRouter(Study)} />

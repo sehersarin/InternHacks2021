@@ -1,5 +1,5 @@
 import React from "react";
-import Done from "../../Images/Done.png";
+
 import portrait from "../../Images/portrait.png";
 import work from "../../Images/work.png";
 import sentiment from "../../Images/sentiment_very_satisfied.png";

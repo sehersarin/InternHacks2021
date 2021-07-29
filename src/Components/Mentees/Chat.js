@@ -7,8 +7,7 @@ import profilePic from '../../Images/profilePic.png';
 import duo from '../../Images/duo.png';
 import phone from '../../Images/phone.png';
 
-function Chat() {  
-    const scroll=useRef();  
+function Chat() { 
     const[messages, setMessages] = useState([]);
 
     useEffect(() => {
@@ -45,14 +44,11 @@ function Chat() {
                     <div className="msgs">
                         {messages.map(({id, text, photoURL, uid}) => (
                             <div>
-                                {/* <p>{firebase.firestore.FieldValue.serverTimestamp()}</p> */}
-                                <div key={id} className={`msg ${uid==auth.currentUser.uid ? 'box1 sent' : 'box2 received'}`}>
-                                    {/* <img src={profilePic}/> */}
-                                    {uid!=auth.currentUser.uid ? <img src={profilePic} style={{marginLeft: "5px", marginRight: "5px"}}/> : <></> }
+                                <div key={id} className={`msg ${uid===auth.currentUser.uid ? 'box1 sent' : 'box2 received'}`}>
+                                    {uid!==auth.currentUser.uid ? <img src={profilePic} style={{marginLeft: "5px", marginRight: "5px"}}/> : <></> }
                                     <img src={photoURL} alt=""/>
                                     <p className="texts">{text}</p>
-                                    {uid==auth.currentUser.uid ? <img src={profilePic} style={{marginLeft: "5px", marginRight: "5px"}}/> : <></> }
-                                    {/* <img src={profilePic}/> */}
+                                    {uid===auth.currentUser.uid ? <img src={profilePic} style={{marginLeft: "5px", marginRight: "5px"}}/> : <></> }
                                 </div>
                             </div>
                         ))}
@@ -61,7 +57,6 @@ function Chat() {
                 </div>
                 </div>
             </div>
-            {/* <div className="container" style={{height: "20px"}}/> */}
         </div>
     )
 }

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import logo from "../../Images/logo.JPG";
-import { Menu, MenuItem, Button, Link } from '@material-ui/core';
-import { deepPurple } from '@material-ui/core/colors';
-import { makeStyles } from '@material-ui/core/styles';
+import { Menu, MenuItem, Button } from '@material-ui/core';
 
 import profilePic from '../../Images/profilePic.png';
 import expandMore from '../../Images/expandMore.png';
@@ -10,28 +8,15 @@ import calendar from '../../Images/calendar.png';
 import chat from '../../Images/chat.png';
 import notification from '../../Images/notification.png';
 
-import MenteeProfile from './MenteeProfile';
 import { useAuth } from "../../context/AuthContext";
 import { useHistory } from "react-router-dom";
-import { Alert } from "@material-ui/lab";
-
-const Notifs = () => {
-  return(
-    <div className="container" style={{backgroundColor: "red"}}>
-      <p>Test</p>
-    </div>
-  );
-}
 
 function MenteeLoginHeader() {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [error, setError] = useState("");
+  const [setError] = useState("");
   const { signout } = useAuth();
   const history = useHistory();
-  const [showNotifs, setShowNotifs] = React.useState(false);
   
-  const onClick = () => setShowNotifs(true);
-
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   }
@@ -79,12 +64,10 @@ function MenteeLoginHeader() {
               </a>
             </li>
             <li className="nav-item">
-              <button style={{backgroundColor: "transparent", borderColor: "transparent", marginTop: "-10px"}} 
-                onClick={onClick}>
+              <button style={{backgroundColor: "transparent", borderColor: "transparent", marginTop: "-10px"}} >
                 <img src={notification} 
                   style={{height: '28px', width: '28px', marginBottom: '-13px', marginRight: '2px'}}
                   />
-                {/* { showNotifs ? <Notifs /> : null } */}
               </button>
             </li>
             <li className="nav-item">
@@ -126,7 +109,6 @@ function MenteeLoginHeader() {
                   </MenuItem>
                   <MenuItem onClick={handleSignOut}>
                       Sign Out
-                      {/* {error && <Alert severity="error" className="mb-4">{error}</Alert>} */}
                   </MenuItem>
                 </Menu>
             </li>

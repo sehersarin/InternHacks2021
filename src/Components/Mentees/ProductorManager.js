@@ -32,7 +32,7 @@ const professionals = [
   },
 ];
 const productor = professionals.filter((person) => {
-  return person.position == "Technical Productor Manager";
+  return person.position === "Technical Productor Manager";
 });
 
 const ProductorManager = () => {

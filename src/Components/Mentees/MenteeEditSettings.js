@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useAuth } from '../../context/AuthContext';
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Alert } from '@material-ui/lab';
 
 function MenteeEditProfile() {
@@ -15,7 +15,7 @@ function MenteeEditProfile() {
     function handleSubmit(e) {
         e.preventDefault()
 
-        if(emailRef.current.value.length==0) {
+        if(emailRef.current.value.length===0) {
             return setError('Email cannot be empty')
         }
 
@@ -23,8 +23,8 @@ function MenteeEditProfile() {
             return setError('You have entered an invalid email address')
         }
 
-        if(passwordRef.current.value.length==0 || 
-            passwordConfirmRef.current.value.length==0) {
+        if(passwordRef.current.value.length===0 || 
+            passwordConfirmRef.current.value.length===0) {
             return setError('Password cannot be empty')
         }
 
