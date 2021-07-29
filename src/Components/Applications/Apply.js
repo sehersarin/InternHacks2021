@@ -18,8 +18,8 @@ function Apply() {
                                     <a className="navbar-brand navb h1" 
                                         href="https://docs.google.com/forms/d/e/1FAIpQLSeMVuZCK3jHdMzpr7--HgFBao2ZdyhD0hdP79eoE8mdmnLgVA/viewform?usp=sf_link">
                                         {" "}
-                                        <button className="btn text-warning rounded p-4 mt-2 w-95 fs-2"
-                                            style={{backgroundColor: "#14213D"}}>
+                                        <button className="btn text-warning p-4 mt-2 w-95 fs-2"
+                                            style={{backgroundColor: "#14213D", borderRadius: "10px"}}>
                                             <h4><b>Apply to become a Mentor</b></h4>
                                         </button>
                                     </a>
@@ -41,8 +41,8 @@ function Apply() {
                                     <a className="navbar-brand navb h1" 
                                         href="https://docs.google.com/forms/d/e/1FAIpQLSehkXYwEJeSQwMXC7U_ezLxKfo2822XxTBIjdcrkTnOn1eoGQ/viewform?usp=sf_link">
                                         {" "}
-                                        <button className="btn text-warning rounded p-4 mt-2 w-95 fs-2"
-                                            style={{backgroundColor: "#14213D"}}>
+                                        <button className="btn text-warning p-4 mt-2 w-95 fs-2"
+                                            style={{backgroundColor: "#14213D", borderRadius: "10px"}}>
                                             <h4><b>Apply to become a Mentee</b></h4>
                                         </button>
                                     </a>
