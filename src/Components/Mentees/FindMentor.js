@@ -42,11 +42,10 @@ function FindMentor() {
 
       for(let i=0; i<updateAvailability.length; i++) {
         if(updateAvailability[i]===true) {
-          // for(let j=0; j<professionals.length; j++) {
-            if(availabilityOptions[i]===availabilityOptions[0]) {
-              console.log(availabilityOptions[0]);
-              setMonChecked(current => !current)
-            }
+          if(availabilityOptions[i]===availabilityOptions[0]) {
+            console.log(availabilityOptions[0]);
+            setMonChecked(current => !current)
+          }
         } else {
           setMonChecked(current => !current)
         }
@@ -281,41 +280,40 @@ function FindMentor() {
           <hr />
 
           <div className="ml-5">
-            {/* <div className="d-inline-flex"> */}
-              {monChecked===true ? 
-                <div className="d-inline-flex">
-                  <FindMentorComponent
-                    key={0}
-                    firstName={professionals[0].firstName}
-                    lastName={professionals[0].lastName}
-                    company={professionals[0].company}
-                    position={professionals[0].position}
-                  />
-                  <FindMentorComponent
-                    key={2}
-                    firstName={professionals[2].firstName}
-                    lastName={professionals[2].lastName}
-                    company={professionals[2].company}
-                    position={professionals[2].position}
-                  />
-                </div>
-                :
-                <>
-                {professionals.map((person, i) => {
-                  return (
-                    <div className="d-inline-flex">
-                      <FindMentorComponent
-                        key={i}
-                        firstName={person.firstName}
-                        lastName={person.lastName}
-                        company={person.company}
-                        position={person.position}
-                      />
-                    </div>
-                  );
-                })}
-                </>
-              }
+            {monChecked===true ? 
+              <div className="d-inline-flex">
+                <FindMentorComponent
+                  key={0}
+                  firstName={professionals[0].firstName}
+                  lastName={professionals[0].lastName}
+                  company={professionals[0].company}
+                  position={professionals[0].position}
+                />
+                <FindMentorComponent
+                  key={2}
+                  firstName={professionals[2].firstName}
+                  lastName={professionals[2].lastName}
+                  company={professionals[2].company}
+                  position={professionals[2].position}
+                />
+              </div>
+              :
+              <>
+              {professionals.map((person, i) => {
+                return (
+                  <div className="d-inline-flex">
+                    <FindMentorComponent
+                      key={i}
+                      firstName={person.firstName}
+                      lastName={person.lastName}
+                      company={person.company}
+                      position={person.position}
+                    />
+                  </div>
+                );
+              })}
+              </>
+            }
           </div>
         </div>
       </>
