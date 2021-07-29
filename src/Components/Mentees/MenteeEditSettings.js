@@ -19,6 +19,10 @@ function MenteeEditProfile() {
             return setError('Email cannot be empty')
         }
 
+        if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(emailRef.current.value)) {
+            return setError('You have entered an invalid email address')
+        }
+
         if(passwordRef.current.value.length==0 || 
             passwordConfirmRef.current.value.length==0) {
             return setError('Password cannot be empty')
@@ -64,7 +68,7 @@ function MenteeEditProfile() {
                         <input 
                             className="rounded-md w-100 border border-gray-400 p-3 mb-4"
                             type="email"
-                            value={currentUser.email}
+                            defaultValue={currentUser.email}
                             ref={emailRef} 
                             required />
                     </label>

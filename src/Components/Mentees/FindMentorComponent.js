@@ -2,7 +2,7 @@ import portrait from "../../Images/portrait.png";
 import chat from "../../Images/chat.png";
 import work from "../../Images/work.png";
 
-const FindMentorComponent = ({ firstName, lastName, industry, position }) => {
+const FindMentorComponent = ({ firstName, lastName, company, position }) => {
   return (
     <div>
       <a className="nav-link navb" aria-current="page" 
@@ -16,7 +16,7 @@ const FindMentorComponent = ({ firstName, lastName, industry, position }) => {
           />
           <div className="card-body">
             <h5 className="card-title">{firstName}{" "}{lastName}</h5>
-            <p className="card-text">{industry}</p>
+            <p className="card-text">{company}</p>
             <p>
               <img src={work} style={{ marginRight: "10px" }} /> {position}
             </p>
