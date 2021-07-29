@@ -6,37 +6,46 @@ import {
 } from "react-bootstrap";
 import team from "../../Images/team.png";
 
+import JohnDoe from '../Mentors/JohnDoeMentorProfile';
+import JaneDoe from '../Mentors/JaneDoeMentorProfile';
+
 function FindMentor() {
-  const profesionals = [
+  const professionals = [
     {
-      name: "Jhon Doe",
+      firstName: "John",
+      lastName: "Doe",
       industry: "Apple",
-      position: "Software Engineering",
+      position: "Software Engineering Intern",
     },
     {
-      name: "Jane Doal",
+      firstName: "Jane",
+      lastName: "Doe",
       industry: "Facebook",
-      position: " Technical Productor Manager",
+      position: "Product Management Intern",
     },
     {
-      name: "Ashley Yoon",
+      firstName: "Jamie",
+      lastName: "Lee",
       industry: "Google",
-      position: "Software Engineering",
+      position: "Software Engineering Intern",
     },
     {
-      name: "Josua Parker",
+      firstName: "Joshua",
+      lastName: "Whitebell",
       industry: "Amazon",
-      position: "Software Engineering",
+      position: "Software Engineering Intern",
     },
     {
-      name: "Seher Sarin",
+      firstName: "Seher",
+      lastName: "Sarin",
       industry: "Google",
-      position: "Technical Productor Manager",
+      position: "Product Management Intern",
     },
     {
-      name: "Adhel Geng",
+      firstName: "Adhel",
+      lastName: "Geng",
       industry: "Google",
-      position: "Product Designer",
+      position: "Product Design Intern",
     },
   ];
   return (
@@ -44,7 +53,6 @@ function FindMentor() {
       <div>
         <div className="container">
           <div className="row d-flex">
-            {/* <div className="mt-4 mb-4 mr-2"> */}
             <button
               className="mr-2 dropdown-toggle"
               style={{
@@ -155,18 +163,18 @@ function FindMentor() {
             >
               <b style={{ fontColor: "#14213D" }}>Sort Mentors By</b>
             </button>
-            {/* </div> */}
           </div>
         </div>
         <hr />
 
         <div className="ml-5">
-          {profesionals.map((person, i) => {
+          {professionals.map((person, i) => {
             return (
               <div className="d-inline-flex">
                 <FindMentorComponent
                   key={i}
-                  name={person.name}
+                  firstName={person.firstName}
+                  lastName={person.lastName}
                   industry={person.industry}
                   position={person.position}
                 />

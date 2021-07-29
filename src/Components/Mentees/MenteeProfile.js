@@ -40,7 +40,7 @@ function MenteeProfile() {
                 {/* <h2>Hi, I'm {this.state.firstName}{' '}{this.state.lastName}</h2>
                 <p>{this.state.university}</p>
                 <p>{this.state.year}</p> */}
-                <h2>Hi, I'm Jane Doe</h2>
+                <h2>Hi, I'm Ashley Yoon</h2>
                 <p>Georgetown University</p>
                 <p>Class of 2024</p>
               </div>
@@ -110,7 +110,7 @@ function MenteeProfile() {
             </p>
             <div className="pt-3 pb-3">
               <img src={chat} style={{marginLeft: "3px", marginRight: "10px"}}/> I'm fluent in
-              <span className="font-weight-bold"> Java, C, C++</span>
+              <span className="font-weight-bold"> Java, Python</span>
             </div>
             <div className="pb-3">
               <img src={work} style={{marginRight: "10px"}}/> I'm looking for a career in
@@ -144,7 +144,7 @@ function MenteeProfile() {
               <p className="mt-3 mr-3">
                 <span className="border border-warning shadow pl-4 pr-4 pt-2 pb-2"
                   style={{borderRadius: "10px"}}>
-                  <b>Deep Learning</b>
+                  <b>Machine Learning</b>
                 </span>
               </p>
               <p className="m-3">
@@ -155,7 +155,7 @@ function MenteeProfile() {
               </p>
               <p className="m-3">
                 <span className="border border-warning shadow pl-4 pr-4 pt-2 pb-2" style={{borderRadius: "10px"}}>
-                  <b>Gaming</b>
+                  <b>Healthcare</b>
                 </span>
               </p>
             </div>

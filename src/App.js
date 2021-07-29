@@ -13,6 +13,8 @@ import MenteeProfile from "./Components/Mentees/MenteeProfile";
 import MenteeEditSettings from "./Components/Mentees/MenteeEditSettings";
 import Schedule from "./Components/Calendar/Schedule";
 import Chat from "./Components/Mentees/Chat";
+import JohnDoe from "./Components/Mentors/JohnDoeMentorProfile";
+import JaneDoe from "./Components/Mentors/JaneDoeMentorProfile";
 import SoftwareEngineer from "./Components/Mentees/SoftwareEngineer";
 import ProductorManager from "./Components/Mentees/ProductorManager";
 import ProductDesigner from "./Components/Mentees/ProductDesigner";
@@ -69,6 +71,19 @@ function App() {
               path="/find-mentor"
               component={withRouter(FindMentor)}
             />
+
+            <PrivateRoute
+              exact
+              path="/john-doe"
+              component={withRouter(JohnDoe)}
+            />
+
+            <PrivateRoute
+              exact
+              path="/jane-doe"
+              component={withRouter(JaneDoe)}
+            />
+
             <PrivateRoute
               exact
               path="/find-mentor/software-engineer"

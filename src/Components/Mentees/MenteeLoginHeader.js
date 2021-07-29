@@ -73,11 +73,6 @@ function MenteeLoginHeader() {
                 <b>Study</b>
               </a>
             </li>
-            {/* <li className="nav-item">
-              <a className="nav-link navb" href="/community">
-                <b>Community</b>
-              </a>
-            </li> */}
             <li className="nav-item">
               <a className="nav-link navb" href="/chat">
                 <img src={chat} style={{height: '21px', width: '18px', marginRight: '7px'}}/>
@@ -89,7 +84,7 @@ function MenteeLoginHeader() {
                 <img src={notification} 
                   style={{height: '28px', width: '28px', marginBottom: '-13px', marginRight: '2px'}}
                   />
-                { showNotifs ? <Notifs /> : null }
+                {/* { showNotifs ? <Notifs /> : null } */}
               </button>
             </li>
             <li className="nav-item">
